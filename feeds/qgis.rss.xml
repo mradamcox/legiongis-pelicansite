@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Legion GIS</title><link>/</link><description></description><atom:link href="/feeds/qgis.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 23 Mar 2016 00:00:00 -0500</lastBuildDate><item><title>Using QGIS, GeoServer, and PostGIS to Make and Maintain Arches Overlays</title><link>/using-qgis-geoserver-and-postgis-to-make-and-maintain-arches-overlays.html</link><description>&lt;p&gt;Someone got in touch with me recently about using GeoServer to serve custom-made (and &lt;em&gt;maintainable&lt;/em&gt;) vector overlays to the Arches MAP VIEW, in order to add specific study/research areas to the map. This can be achieved with a graceful integration of some solid open source technologies that Arches is primed to handle. Functionally, wouldn't it be great to edit your vector layers in Quantum GIS, and have the updates immediately visible in your Arches overlays?&lt;/p&gt;
 &lt;p&gt;Well, here are my thoughts: &lt;/p&gt;
-&lt;p&gt;&lt;a href="/theme/img/qgis-geoserver-postgis-arches.png"&gt;&lt;img alt="what's going on" src="/theme/img/qgis-geoserver-postgis-arches.png" /&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href="https://s3-us-west-2.amazonaws.com/legiongis.com/img/qgis-geoserver-postgis-arches.png"&gt;&lt;img alt="what's going on" src="https://s3-us-west-2.amazonaws.com/legiongis.com/img/qgis-geoserver-postgis-arches.png" /&gt;&lt;/a&gt;
 &lt;em&gt;I'm using :XX where a port must be open to allow the appropriate connections. (It's pretty slick to re-route GeoServer to run through port :80 (instead of :8080) with all your other HTTP requests, but that's a detail beyond our needs here...)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Or, narratively: Store your vector overlays in your existing PostGIS installation, and they can be directly edited there with QGIS (because it has great PostGIS support). These same tables can simultaneously published (and styled) by GeoServer as layers, which in turn can be fed to your custom app, and show up in the map.&lt;/p&gt;
 &lt;p&gt;Elements of this setup are already built into Arches, as you can read about &lt;a href="http://arches-hip.readthedocs.org/en/latest/loading-data/#optional-gis-layers-for-administrative-areas"&gt;here&lt;/a&gt;. There is already an "aux" schema within your app's PostGIS database, and with a little configuration you can create polygons whose name will be attributed to any newly created intersecting resource. This is a nice functionality, so you may want to use the following steps to just connect directly to these tables. The steps below will also cover the creation of a new database to hold your overlay tables, outside of the existing app db.&lt;/p&gt;
@@ -53,7 +53,7 @@ Password = postgis&lt;br&gt;
 &lt;ul&gt;
 &lt;li&gt;I made a simple polygon table, so my dialog looked like this:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href="theme/img/make_postgis_table_qgis.png"&gt;&lt;img alt="create table dialog" src="theme/img/make_postgis_table_qgis.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://s3-us-west-2.amazonaws.com/legiongis.com/img/make_postgis_table_qgis.png"&gt;&lt;img alt="create table dialog" src="https://s3-us-west-2.amazonaws.com/legiongis.com/img/make_postgis_table_qgis.png" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Now that your table exists, you can add it as a PostGIS layer and begin to edit it.&lt;/li&gt;
 &lt;/ul&gt;

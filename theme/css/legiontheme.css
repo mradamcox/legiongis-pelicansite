@@ -161,3 +161,31 @@ pre, ol, ul {
     font-weight: bold;
 }
 
+.hp-header {
+  display:table;
+  width:100%;
+  /*height:55%;*/
+  height:150px;
+  /*max-height: 55px;*/
+  position:relative;
+  background:url('https://s3-us-west-2.amazonaws.com/legiongis.com/img/kvr_background_wide.png') no-repeat center center fixed;
+  background-size:cover;
+
+}
+
+.hp-header-inner {
+  display:table;
+  width:100%;
+  /*height:30%;*/
+  height:150px;
+  position:relative;
+  background:url('https://s3-us-west-2.amazonaws.com/legiongis.com/img/kvr_background_wide.png') no-repeat center center fixed;
+  background-size:cover;
+
+}
+
+.hp-header-inner  #title-block H1 {
+  font-size:4em;
+  color:white;
+  text-align:center
+}

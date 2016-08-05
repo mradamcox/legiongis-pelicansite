@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 
     <!-- Google Analytics Tracking -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-74344100-1', 'auto');
       ga('send', 'pageview');
     </script>
@@ -24,16 +24,19 @@
     <!-- Latest compiled JavaScript -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     
-    <link rel="stylesheet" href="/theme/css/foundation.min.css" media="all">
-    <script type="text/javascript" src="/theme/js/modernizr.js"></script>
-    <script type="text/javascript" src="/theme/js/general.js"></script>
+    <!--<link rel="stylesheet" href="./theme/css/foundation.min.css" media="all">-->
+    <script type="text/javascript" src="./theme/js/modernizr.js"></script>
+    <script type="text/javascript" src="./theme/js/general.js"></script>
     
     
     <link href='https://fonts.googleapis.com/css?family=Exo+2:400,300,700,300italic,400italic,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     
-    <link rel="stylesheet" href="/theme/css/lamboz.css" media="all">
-    <link rel="stylesheet" href="/theme/css/legiontheme.css" media="all">
+    
+    <link rel="stylesheet" href="./theme/css/lamboz.css" media="all">
+    <link rel="stylesheet" href="./theme/css/legiontheme.css" media="all">
+    
+    
     <title>Using QGIS, GeoServer, and PostGIS to Make and Maintain Arches Overlays - Legion GIS</title>
     <meta charset="utf-8" />
     <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Legion GIS Full Atom Feed" />
@@ -46,11 +49,11 @@
             <div class="row main-row">
                 <div class="pages">
                     <ul style="text-align:center; margin-bottom:0 !important;">
-                            <li ><a href="/index.html">Home</a></li>
-                            <li ><a href="/pages/services.html">Services</a></li>
-                            <li ><a href="/pages/team.html">Team</a></li>
-                            <li ><a href="/pages/blog.html">Blog</a></li>
-                            <li ><a href="/pages/contact.html">Contact</a></li>
+                            <li ><a href="./index.html">Home</a></li>
+                            <li ><a href="./pages/services.html">Services</a></li>
+                            <li ><a href="./pages/team.html">Team</a></li>
+                            <li ><a href="./pages/blog.html">Blog</a></li>
+                            <li ><a href="./pages/contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -60,7 +63,7 @@
     <div class="page-header">
         <div class="content-header">
             <div id="title-block">
-            <h1>  <a href="/using-qgis-geoserver-and-postgis-to-make-and-maintain-arches-overlays.html" rel="bookmark"
+            <h1>  <a href="./using-qgis-geoserver-and-postgis-to-make-and-maintain-arches-overlays.html" rel="bookmark"
                     title="Permalink to Using QGIS, GeoServer, and PostGIS to Make and Maintain Arches Overlays">Using QGIS, GeoServer, and PostGIS to Make and Maintain Arches Overlays</a></h1>
             </div>
         </div>
@@ -79,7 +82,7 @@
         <div class="entry-content">
             <p>Someone got in touch with me recently about using GeoServer to serve custom-made (and <em>maintainable</em>) vector overlays to the Arches MAP VIEW, in order to add specific study/research areas to the map. This can be achieved with a graceful integration of some solid open source technologies that Arches is primed to handle. Functionally, wouldn't it be great to edit your vector layers in Quantum GIS, and have the updates immediately visible in your Arches overlays?</p>
 <p>Well, here are my thoughts: </p>
-<p><a href="/theme/img/qgis-geoserver-postgis-arches.png"><img alt="what's going on" src="/theme/img/qgis-geoserver-postgis-arches.png" /></a>
+<p><a href="https://s3-us-west-2.amazonaws.com/legiongis.com/img/qgis-geoserver-postgis-arches.png"><img alt="what's going on" src="https://s3-us-west-2.amazonaws.com/legiongis.com/img/qgis-geoserver-postgis-arches.png" /></a>
 <em>I'm using :XX where a port must be open to allow the appropriate connections. (It's pretty slick to re-route GeoServer to run through port :80 (instead of :8080) with all your other HTTP requests, but that's a detail beyond our needs here...)</em></p>
 <p>Or, narratively: Store your vector overlays in your existing PostGIS installation, and they can be directly edited there with QGIS (because it has great PostGIS support). These same tables can simultaneously published (and styled) by GeoServer as layers, which in turn can be fed to your custom app, and show up in the map.</p>
 <p>Elements of this setup are already built into Arches, as you can read about <a href="http://arches-hip.readthedocs.org/en/latest/loading-data/#optional-gis-layers-for-administrative-areas">here</a>. There is already an "aux" schema within your app's PostGIS database, and with a little configuration you can create polygons whose name will be attributed to any newly created intersecting resource. This is a nice functionality, so you may want to use the following steps to just connect directly to these tables. The steps below will also cover the creation of a new database to hold your overlay tables, outside of the existing app db.</p>
@@ -131,7 +134,7 @@ Password = postgis<br>
 <ul>
 <li>I made a simple polygon table, so my dialog looked like this:</li>
 </ul>
-<p><a href="theme/img/make_postgis_table_qgis.png"><img alt="create table dialog" src="theme/img/make_postgis_table_qgis.png" /></a></p>
+<p><a href="https://s3-us-west-2.amazonaws.com/legiongis.com/img/make_postgis_table_qgis.png"><img alt="create table dialog" src="https://s3-us-west-2.amazonaws.com/legiongis.com/img/make_postgis_table_qgis.png" /></a></p>
 <ul>
 <li>Now that your table exists, you can add it as a PostGIS layer and begin to edit it.</li>
 </ul>
@@ -192,9 +195,9 @@ Password = postgis<br>
         </div>
     </section>
     <footer class="footer-article">
-        <div class="tags-and-categories">Filed: <a href="/category/technical.html">technical</a>
-        | Tagged: <a href="/tag/arches.html">Arches </a><a href="/tag/geoserver.html">GeoServer </a><a href="/tag/qgis.html">QGIS </a><a href="/tag/postgis.html">PostGIS </a><!-- 
-        | <a href="/using-qgis-geoserver-and-postgis-to-make-and-maintain-arches-overlays.html" rel="bookmark"
+        <div class="tags-and-categories">Filed: <a href="./category/technical.html">technical</a>
+        | Tagged: <a href="./tag/arches.html">Arches </a><a href="./tag/geoserver.html">GeoServer </a><a href="./tag/qgis.html">QGIS </a><a href="./tag/postgis.html">PostGIS </a><!-- 
+        | <a href="./using-qgis-geoserver-and-postgis-to-make-and-maintain-arches-overlays.html" rel="bookmark"
          title="Permalink to Using QGIS, GeoServer, and PostGIS to Make and Maintain Arches Overlays">Permalink</a>            
         </div>
         metaldata 
@@ -206,10 +209,10 @@ Password = postgis<br>
                             <div class="hidden-xs hidden-sm col-md-2">
                                 <h5>Shortcuts</h5>
                                 <ul class="links">
-                                    <li><a href="/pages/services/arches.html">Arches</a></li>
-                                    <li><a href="/pages/services/cartography.html">Cartography</a></li>
-                                    <li><a href="/pages/services/education.html">Education</a></li>
-                                    <li><a href="/pages/introduction-to-gis.html">Intro QGIS Class</a></li>
+                                    <li><a href="./pages/services/arches.html">Arches</a></li>
+                                    <li><a href="./pages/services/cartography.html">Cartography</a></li>
+                                    <li><a href="./pages/services/education.html">Education</a></li>
+                                    <li><a href="./pages/introduction-to-gis.html">Intro QGIS Class</a></li>
                                 </ul>
                                 <h5>Our Tools</h5>
                                 <ul class="links">
