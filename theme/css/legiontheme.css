@@ -6,6 +6,10 @@ div#title-block H1 {
     color: white;
 }
 
+img {
+    max-width: 100%;
+}
+
 .links {
     list-style:none;
 }
@@ -122,6 +126,7 @@ body {
 /* ... */
 
 .arches-project-image img {
+    width: 100%;
     max-height: 100%;
     border: 1px solid rgba(0,0,0,.15);
     border-radius: 5px;
