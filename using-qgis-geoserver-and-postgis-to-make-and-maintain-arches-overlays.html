@@ -1,0 +1,265 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+
+    <!-- Google Analytics Tracking -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-74344100-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="/theme/css/foundation.min.css" media="all">
+    <script type="text/javascript" src="/theme/js/modernizr.js"></script>
+    <script type="text/javascript" src="/theme/js/general.js"></script>
+    
+    
+    <link href='https://fonts.googleapis.com/css?family=Exo+2:400,300,700,300italic,400italic,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="/theme/css/lamboz.css" media="all">
+    <link rel="stylesheet" href="/theme/css/legiontheme.css" media="all">
+    <title>Using QGIS, GeoServer, and PostGIS to Make and Maintain Arches Overlays - Legion GIS</title>
+    <meta charset="utf-8" />
+    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Legion GIS Full Atom Feed" />
+    <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Legion GIS Full RSS Feed" />
+        
+</head>
+<body>
+    <div class="content">
+        <div class="container main-container">
+            <div class="row main-row">
+                <div class="pages">
+                    <ul style="text-align:center; margin-bottom:0 !important;">
+                            <li ><a href="/index.html">Home</a></li>
+                            <li ><a href="/pages/services.html">Services</a></li>
+                            <li ><a href="/pages/team.html">Team</a></li>
+                            <li ><a href="/pages/blog.html">Blog</a></li>
+                            <li ><a href="/pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+    <meta name="description" content="Someone got in touch with me recently about using GeoServer to serve custom-made (and _maintainable_) vector overlays to the Arches MAP VIEW, in order to add specific study/research areas to the map. This can be achieved with a graceful integration of some solid open source technologies that Arches is primed to handle. Functionally, wouldn't it be great to edit your vector layers in Quantum GIS, and have the updates immediately visible in your Arches overlays?" />
+
+<div class="hp-header-inner">
+    <div class="page-header">
+        <div class="content-header">
+            <div id="title-block">
+            <h1>  <a href="/using-qgis-geoserver-and-postgis-to-make-and-maintain-arches-overlays.html" rel="bookmark"
+                    title="Permalink to Using QGIS, GeoServer, and PostGIS to Make and Maintain Arches Overlays">Using QGIS, GeoServer, and PostGIS to Make and Maintain Arches Overlays</a></h1>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="row content-row" style="padding:20px 0px;">
+                    <div class="container">
+                        <div class="row">
+                           <div class="col-sm-12 col-md-10">
+<div class="content-article">
+    <header class="header-article">
+        <div class="read-more">Posted on Wed 23 March 2016, by Adam Cox</div>
+ 
+   </header>
+    <section class='article'>
+        <div class="entry-content">
+            <p>Someone got in touch with me recently about using GeoServer to serve custom-made (and <em>maintainable</em>) vector overlays to the Arches MAP VIEW, in order to add specific study/research areas to the map. This can be achieved with a graceful integration of some solid open source technologies that Arches is primed to handle. Functionally, wouldn't it be great to edit your vector layers in Quantum GIS, and have the updates immediately visible in your Arches overlays?</p>
+<p>Well, here are my thoughts: </p>
+<p><a href="/theme/img/qgis-geoserver-postgis-arches.png"><img alt="what's going on" src="/theme/img/qgis-geoserver-postgis-arches.png" /></a>
+<em>I'm using :XX where a port must be open to allow the appropriate connections. (It's pretty slick to re-route GeoServer to run through port :80 (instead of :8080) with all your other HTTP requests, but that's a detail beyond our needs here...)</em></p>
+<p>Or, narratively: Store your vector overlays in your existing PostGIS installation, and they can be directly edited there with QGIS (because it has great PostGIS support). These same tables can simultaneously published (and styled) by GeoServer as layers, which in turn can be fed to your custom app, and show up in the map.</p>
+<p>Elements of this setup are already built into Arches, as you can read about <a href="http://arches-hip.readthedocs.org/en/latest/loading-data/#optional-gis-layers-for-administrative-areas">here</a>. There is already an "aux" schema within your app's PostGIS database, and with a little configuration you can create polygons whose name will be attributed to any newly created intersecting resource. This is a nice functionality, so you may want to use the following steps to just connect directly to these tables. The steps below will also cover the creation of a new database to hold your overlay tables, outside of the existing app db.</p>
+<p>I followed these steps on an example Arches v3 installation. So in my case "Remote Server" is an Amazon EC2 instance (running Ubuntu), "Local Computer" is my laptop with QGIS on it, and "Client (Browser)" is anybody looking at the website. To follow along you must have some sort of similar setup (or at least can fill in the blanks where necessary), and you must have a running GeoServer instance on your server.</p>
+<h3>SSH into your server, and create a new db to hold your tables</h3>
+<p><em>This is only if you want to create tables that are outside of your app's existing database. If you need to do reinstallations of your app, you may want to do follow this step because your app's database will be dropped and recreated blank on every reinstallation. If you want to make tables in the existing database, just skip to the next section (and substitute the database name accordingly).</em></p>
+<ol>
+<li>
+<p>Once logged onto the server, use these commands to make the db:</p>
+<div class="highlight"><pre><span></span>~$ psql -U postgres
+postgres=# CREATE DATABASE arches_overlays;
+postgres=# \connect arches_overlays
+postgres=# CREATE EXTENSION postgis;
+</pre></div>
+
+
+</li>
+<li>
+<p>That's all the SQL you need (though you could do most of the next step with SQL if you want). Use <code>\q</code> to quit the psql console.</p>
+</li>
+</ol>
+<h3>Connect to the db with QGIS to make/edit the tables</h3>
+<ol>
+<li>
+<p>Open QGIS, and begin by creating a connection to the db<br><em>You'll need to make sure you can get to your server through port :5432 for this step, which may mean firewall configuration (this is <a href="http://docs.aws.amazon.com/AmazonVPC/latest/GettingStartedGuide/getting-started-create-security-group.html">super easy</a> on AWS)</em></p>
+</li>
+<li>
+<p>Open the "Add PostGIS Layer" dialog, click "New", and enter the following:</p>
+<p>Name = arches overlay db (or whatever you want)<br>
+Host = your IP address<br>
+Port = 5432<br>
+Database = arches_overlays<br>
+Username = postgres<br>
+Password = postgis<br>
+<em>this is the default username/password combo for a new Arches installation</em></p>
+</li>
+<li>
+<p>Click "Test Connection", and once you get it working click "Ok".</p>
+<ul>
+<li>If you are going to use the existing "aux" schema tables in your app database, just find and add these now. You should see "parcels", "overlays", and "addresses". Be sure to refer back to the official Arches <a href="http://arches-hip.readthedocs.org/en/latest/loading-data/#optional-gis-layers-for-administrative-areas">documentation</a> if you're doing this. When you're done editing in QGIS, just skip to the GeoServer section below.</li>
+<li>Otherwise, close the dialog box, and continue with steps 4-6.</li>
+</ul>
+</li>
+<li>
+<p>Now, go to <em>Database &gt; DB Manager &gt; DB Manager</em></p>
+</li>
+<li>
+<p>Expand the PostGIS tab, expand your database, and go to <em>Table &gt; Create Table</em></p>
+<ul>
+<li>I made a simple polygon table, so my dialog looked like this:</li>
+</ul>
+<p><a href="theme/img/make_postgis_table_qgis.png"><img alt="create table dialog" src="theme/img/make_postgis_table_qgis.png" /></a></p>
+<ul>
+<li>Now that your table exists, you can add it as a PostGIS layer and begin to edit it.</li>
+</ul>
+</li>
+<li>
+<p>Re-open the "Add PostGIS Layer" dialog, and re-connect to your database.  You'll now be able to select the new table, and use all the normal QGIS editing tools to add features to it.</p>
+</li>
+</ol>
+<h3>Add your tables to GeoServer as PostGIS data sources</h3>
+<ol>
+<li>
+<p>Log into your GeoServer instance, go to the "Stores" page, and click "Add new data source".</p>
+</li>
+<li>
+<p>Choose "PostGIS" under Vector Data Sources, and enter the information necessary to connect to your database.</p>
+<ul>
+<li>Now use <code>localhost</code> for the Host, because GeoServer and PostGIS are running on the same server</li>
+<li>Be sure to enter the name of your PostGIS database</li>
+</ul>
+</li>
+<li>
+<p>You'll now be able to publish any tables in your database.</p>
+<ul>
+<li>Most of the information is already ready, but be sure to at least compute the bounding boxes.</li>
+</ul>
+</li>
+<li>
+<p>Now you can style the layers all you like with GeoServer's SLD support.</p>
+</li>
+</ol>
+<h3>Add your GeoServer layers as overlays in your Arches app</h3>
+<ol>
+<li>
+<p>Finally, the easy part. All you need to do is open your layers file, found here:</p>
+<p>/hipapp/hipapp/media/js/map/layers.js</p>
+<p>and make a new layer object that uses your GeoServer layer for the source. The relevant portion of your javascript will look something like this:</p>
+<div class="highlight"><pre><span></span><span class="n">layer</span><span class="o">:</span> <span class="k">new</span> <span class="n">ol</span><span class="o">.</span><span class="na">layer</span><span class="o">.</span><span class="na">Tile</span><span class="o">({</span>
+    <span class="n">source</span><span class="o">:</span> <span class="k">new</span> <span class="n">ol</span><span class="o">.</span><span class="na">source</span><span class="o">.</span><span class="na">TileWMS</span><span class="o">({</span>
+        <span class="n">url</span><span class="o">:</span> <span class="s1">&#39;http://XX.XX.XX.XX:8080/geoserver/workspacename/wms/&#39;</span><span class="o">,</span>
+        <span class="n">params</span><span class="o">:</span> <span class="o">{</span>
+            <span class="s1">&#39;LAYERS&#39;</span><span class="o">:</span><span class="s1">&#39;workspacename:layername&#39;</span><span class="o">,</span>
+            <span class="s1">&#39;TILED&#39;</span><span class="o">:</span><span class="kc">true</span><span class="o">,</span>
+        <span class="o">},</span>
+        <span class="n">serverType</span><span class="o">:</span> <span class="s1">&#39;geoserver&#39;</span>
+    <span class="o">}),</span>
+<span class="o">}),</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>Full instructions on how to add overlays to your layers.js file can be found <a href="http://arches-hip.readthedocs.org/en/latest/customization/#overlays">here</a> in the official Arches-HIP documention.</p>
+</li>
+</ol>
+<hr />
+<p>It's a lot of steps, but if you live in fantasy-land and don't run into any issues, it shouldn't take more than half an hour or so. And if you can get it to work once, the next time it will be more or less effortless.</p>
+<p>We don't have comments on our blog yet, but feel free to contact me (address on footer below) with any problems or questions.  </p>
+        </div>
+    </section>
+    <footer class="footer-article">
+        <div class="tags-and-categories">Filed: <a href="/category/technical.html">technical</a>
+        | Tagged: <a href="/tag/arches.html">Arches </a><a href="/tag/geoserver.html">GeoServer </a><a href="/tag/qgis.html">QGIS </a><a href="/tag/postgis.html">PostGIS </a><!-- 
+        | <a href="/using-qgis-geoserver-and-postgis-to-make-and-maintain-arches-overlays.html" rel="bookmark"
+         title="Permalink to Using QGIS, GeoServer, and PostGIS to Make and Maintain Arches Overlays">Permalink</a>            
+        </div>
+        metaldata 
+        -->
+    </footer>
+    <!-- disqus  -->
+</div>
+                            </div>
+                            <div class="hidden-xs hidden-sm col-md-2">
+                                <h5>Shortcuts</h5>
+                                <ul class="links">
+                                    <li><a href="/pages/services/arches.html">Arches</a></li>
+                                    <li><a href="/pages/services/cartography.html">Cartography</a></li>
+                                    <li><a href="/pages/services/education.html">Education</a></li>
+                                    <li><a href="/pages/introduction-to-gis.html">Intro QGIS Class</a></li>
+                                </ul>
+                                <h5>Our Tools</h5>
+                                <ul class="links">
+                                    <li><a href="http://qgis.org/">Quantum GIS</a></li>
+                                    <li><a href="http://esri.com/">ArcGIS</a></li>
+                                    <li><a href="http://archesproject.org/">Arches</a></li>
+                                    <li><a href="http://gimp.org">GIMP</a></li>
+                                    <li><a href="http://geoserver.org">GeoServer</a></li>
+                                    <li><a href="http://inkscape.org">Inkscape</a></li>
+                                    <li><a href="http://python.org/">Python</a></li>
+                                    <li><a href="https://aws.amazon.com/">Amazon Web Services</a></li>
+                                    <li><a href="http://getpelican.com/">Pelican</a></li>
+                                    <li><a href="https://www.mapbox.com/tilemill/">TileMill</a></li>
+                                </ul>
+                                <h5>Blog Feeds</h5>
+                                <ul class="links">
+                                    <li><a href="/feeds/all.atom.xml" rel="alternate">Atom</a></li>
+                                    <li><a href="/feeds/all.rss.xml" rel="alternate">RSS</a></li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer" style="text-align:center">
+        <div class="container">
+            <div class="row" style="padding:15px 0px; margin-left:0px; margin-right:0px; max-width:none;">
+                <div class="col-sm-4">
+                    <p>Site updated Aug 05, 2016 (<a href="https://github.com/mradamcox/legiongis-pelicansite/commits/master">view commits</a>)</p>
+                </div>
+                <div class="col-sm-4">
+                    <p><a id="email-address"></a> | 608-606-9928</p>
+                </div>
+                <div class="col-sm-4">
+<p>Powered by <a href="http://getpelican.com/">Pelican</a>, theme based on <a href="https://github.com/getpelican/pelican-themes/tree/master/bricks">bricks</a></p>                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var c1 = "info";
+        var c2 = "@";
+        var c3 = "legiongis.com";
+        var email = c1+c2+c3
+        $(document).ready(function() {
+            document.getElementById('email-address').textContent = email;
+            document.getElementById('email-address').href = "mailto:"+email;
+        });
+    </script>
+</body>
+</html>

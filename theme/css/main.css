@@ -1,0 +1,117 @@
+html {
+    font-family: Georgia;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #BDA691;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+.container {
+    width: 875px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    padding-top:0px;
+    background-color: #F8F7BF;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-right: black 2px solid;
+    border-bottom: black 2px solid;
+    border-left: black 2px solid;
+}
+
+.content {
+    padding: 65px 35px 35px 35px;
+}
+
+/* NAVIGATION BAR */
+.navbar{
+    z-index: 1;
+    position: fixed;
+}
+
+#navlist {
+    list-style:none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding:0;
+    width: 875px;
+}
+
+#navlist li {
+      padding-bottom: 5px;
+      padding-top: 5px;
+      display: inline;
+      margin: 0;
+      float: left;
+      width: 25%;
+      text-align: center;
+      background-color: #9CABA1;
+}
+
+#navlist a {
+    overflow:hidden;
+    margin:0;
+    text-decoration:none;
+    text-align:center;
+    font-weight:bold;
+    font-style:normal;
+    font-size:20px;
+    color: black;
+}
+
+#navlist li:hover,#Hr-1 li:active,#Hr-1 li:focus {
+    background-color: #CF5734;
+}
+
+#navleft {
+    border-bottom-left-radius: 7px;
+}
+
+#navright {   
+    border-bottom-right-radius: 7px;
+}
+
+/* LOC BAR */
+.locbar {
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  margin-bottom: 0px;
+  padding-top: 11px;
+  width: 875px;
+  height: 20px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
+  color: black;
+  background-color: #BACAC5;
+}
+
+.locbar a {
+ text-decoration: none;
+  color: black;
+}
+
+a:link {
+    color: #364DC9
+}
+
+a:visited {
+    color: #551A8B
+}

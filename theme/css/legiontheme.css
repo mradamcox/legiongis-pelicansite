@@ -1,0 +1,163 @@
+div#title-block H1 {
+    font-size: 6em;
+    font-weight: 900;
+    text-shadow: 2px 2px 10px #000;
+    margin-bottom: 0px;
+    color: white;
+}
+
+.links {
+    list-style:none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    background-color: #B73709;
+    color: white;
+    left: -5px;
+}
+
+.recent-news-header {
+    text-align: center;
+}
+
+.article-summary {
+    background-color: #eee;
+    margin-bottom: 0.8em;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+.date-line {
+    font-size: 0.8em;
+    letter-spacing: 2px;
+}
+
+.headshot {
+    text-align: right;
+}
+
+.headshot img {
+    width: 80px;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 5px;
+}
+
+/* this stuff should keeps the footer on the bottom of the page */
+html, body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+
+body { 
+    display: table; 
+    width: 100%; 
+    height: 100%; 
+}
+
+
+.wrapper {
+	min-height:100%;
+	position:relative;
+}
+.header {
+	background:#ededed;
+	padding:10px;
+}
+.content {
+    height:auto;
+    width:100%;
+    padding:0px;
+}
+
+.main-container {
+    padding: 0px;
+    width: 100%;
+}
+
+.main-row {
+    max-width: none;
+}
+
+.content-row {
+    max-width: none;
+    padding: 25px 0px;
+}
+
+.footer {
+    display:table-row;
+    height: 1px;
+    background-color: #637486;
+    color: #FFF;
+}
+
+.footer p{
+    font-size: 12pt;
+}
+
+/* slider gallery stuff */
+.thumbnails img {
+    height: 80px;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 5px;
+    padding: 1px;
+    margin: 0 10px 10px 0;
+}
+
+.thumbnails img:hover {
+    border: 1px solid rgba(0,0,0,.15);
+    cursor:pointer;
+}
+
+.preview img {
+    border: 1px solid rgba(0,0,0,.15);
+    padding: 1px;
+    width: 600px;
+}
+    
+/* ... */
+
+.arches-project-image img {
+    max-height: 100%;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 5px;
+    padding: 1px;
+    margin-top: 8px;
+}
+
+.arches-project-row {
+    padding-top: 15px;
+}
+
+.service-summary {
+    text-align: center;
+    background-color: #eee;
+    padding: 1em;
+    border-radius: 5px;
+    min-height: 200px;
+}
+
+pre, ol, ul {
+    margin-bottom: 1em !important;
+}
+
+#mc_embed_signup{
+    background:#fff;
+    clear:left;
+    font:14px "Lato",sans-serif;
+
+}
+
+.mc-field-group {
+    padding-bottom:3px !important;
+}
+
+#mc_embed_signup .button {
+    font-family: "Lato",sans-serif;
+    font-weight: bold;
+}
+
