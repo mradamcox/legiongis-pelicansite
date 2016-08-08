@@ -2,6 +2,7 @@ body, html {
   margin: 0;
   height:100%;
   background-color: #db4437;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 .container {
@@ -28,6 +29,16 @@ a:visited,a:link {
 
 .wcr-form {
     border: solid grey 1px;
+}
+
+.wcr-index h2 {
+    text-align: center;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.wcr-index ul {
+    list-style-type: none;
+    
 }
 
 .zoom-container {

@@ -25,8 +25,8 @@ $(document).ready(function() {
                 </div>\
                 <div class="help-content">\
                     <div class="col-sm-6">\
-                        <iframe class="wcr-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdWfa9IGqQbpQtQ2o5exN7tM6fdlPA_eJDmHRlObpDplrM_iQ/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>\
-                        <div class="zoom-container" id="'+containerId+'" style="height:200px;width:450px;background-color:lightgrey;margin-left:auto;margin-right:auto"></div>\
+                        <iframe class="wcr-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdWfa9IGqQbpQtQ2o5exN7tM6fdlPA_eJDmHRlObpDplrM_iQ/viewform?entry.1615259771='+i+'&embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>\
+                        <div class="zoom-container" id="'+containerId+'" style="height:200px;width:555px;background-color:lightgrey;margin-left:auto;margin-right:auto"></div>\
                     </div>\
                     <div class="col-sm-6">\
                         <img id="img-zoom" style="border: solid black 1px;" src="'+jpgLink+'" width="100%" data-zoom-image="'+jpgLink+'"/>\
@@ -72,7 +72,7 @@ $(document).ready(function() {
             $(".zoomWindowContainer").remove();
         } else {
             contentEl.show("fast");
-            $(imgEl).elevateZoom({zoomWindowPosition: zcontainer.attr("id"), zoomWindowHeight: 200, zoomWindowWidth:450, borderSize: 0, easing:false});
+            $(imgEl).elevateZoom({zoomWindowPosition: zcontainer.attr("id"), zoomWindowHeight: 200, zoomWindowWidth:555, borderSize: 0, easing:false});
         }
         $(iconEl).toggleClass("fa-chevron-down");
         $(iconEl).toggleClass("fa-chevron-right");
