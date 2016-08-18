@@ -35,7 +35,8 @@
                 protocol: new OpenLayers.Protocol.WFS({
                     version: "1.0.0",
                     srsName: "EPSG:4326",
-                    url: "/geoserver/ole-test/ows",
+                    url: "http://legiongis.com/geoserver/crawford_co/wfs?LAYERS=crawford_co:wells_master",
+                    url: "http://legiongis.com/geoserver/wfs?service=wfs&version=1.1.0&request=GetCapabilities&LAYERS=crawford_co:wells_master",
                     featurePrefix: "wfst",
                     featureNS :  "ole-test",
                     featureType: "WaterBody",
