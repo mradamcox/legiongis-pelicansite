@@ -16,14 +16,21 @@
     
     <!-- Latest compiled JavaScript -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="wcr-listings.css">
+    <link rel="stylesheet" href="wcr-listings.css">
+    <!-- OpenLayers JS -->
+    <script src="http://openlayers.org/en/v3.0.0/build/ol.js" type="text/javascript"></script>
+    
+    <!-- OpenLayers CSS -->
+    <link rel="stylesheet" href="http://openlayers.org/en/v3.0.0/css/ol.css" type="text/css">
+    
+    <link rel="stylesheet" href="../theme/css/overlay-map.css" type="text/css">
   
-  <style>
+    <style>
     a {
         color: #003cef !important;
     }
     
-  </style>
+    </style>
 </head>
 <body>
     <div class="container" style="width:800px;">
@@ -41,8 +48,42 @@
                 <h3>GIS-Based Sinkhole Survey</h3>
             </div>
             <div class="col-xs-12">
-                <p>Participants: Please click <a href="http://opengeo.legiongis.com/geoexplorer/composer/#maps/4">here</a> to access the survey interface.</p>
-                <?php include ('map.php');?>
+            
+                <p>Participants: Please click <a href="http://opengeo.legiongis.com/geoexplorer/composer/#maps/4">here</a> to access the survey interface, and <a href="https://s3-us-west-2.amazonaws.com/legiongis.com/img/Sinkholes-Volunteer_Guide.pdf">here</a> for more background and instructions.</p>
+                <p>Below is a map that will live update with our progress. The sinks are layered by depth.<br><span style="color:green">green are confirmed sinkholes</span><br><span style="color:#ff0000">red are not sinkholes</span><br><span style="color:#0000ff">blue are questionable</span><br><span style="color:#bda691">tan have not yet been checked</span><br>black fall within 30ft of a road centerline or within a flood zone)</p>
+                <div class="content-map">
+                    <div id="mapbar">
+                        <div>
+                            <ul id="bmlist" class="bar topbar">
+                                <li class="rowhead toprow"><b>BASEMAP</b></li>
+                                <li><button id="slope" class="layer wide bm" class="selected">slope</button></li>
+                                <li><button id="hillshade" class="layer wide bm">hillshade</button></li>
+                                <li><button id="blank" class="layer bm"><em>blank</em></button></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul id="overlist" class="bar">
+                                <li class="rowhead"><b>SINKS</b></li>
+                                <li><button id="s10" class="layer hm">10+ ft</button></li>
+                                <li><button id="s5-10" class="layer hm">5-10 ft</button></li>
+                                <li><button id="s2-5" class="layer hm">2-5 ft</button></li>
+                                <li><button id="s1-2" class="layer hm">1-2 ft</button></li>
+                                <li><button id="blank" class="layer hm"><em>none</em></button></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                        
+                    
+                    <div id="map" class="map"></div>
+                    
+                    <div class="info-box" id="layer-info" style="display:none"></div>
+                    
+                    <div id="footbar">
+                        <b>layer info</b> <button id="toggleinfo" class="lite">show</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<<!--<b>accuracy note</b> <button id="togglenote" class="lite">show</button>-->
+                    </div>
+                </div>
+                <script src="../theme/js/crawford-sink-display.js" type="text/javascript"></script>
             </div>
             
         </div>
@@ -147,5 +188,6 @@
             </div>
         </div>
     </div>
+    
 </body>
 </html>
