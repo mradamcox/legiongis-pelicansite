@@ -42,6 +42,7 @@
             </div>
             <div class="col-xs-12">
                 <p>Participants: Please click <a href="http://opengeo.legiongis.com/geoexplorer/composer/#maps/4">here</a> to access the survey interface.</p>
+                <?php include 'map.php';?>
             </div>
             
         </div>

@@ -1,0 +1,170 @@
+a:link {
+    color: #364DC9
+}
+
+a:visited {
+    color: #551A8B
+}
+
+/* GENERAL */
+
+.content-map {
+    margin: 0px 15px 15px 15px;
+    border: 2px black solid;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+#mapbar {
+    border-bottom: 2px black solid;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+}
+
+.rowhead {
+    padding-top: 5px;
+    width: 95px;
+    outline: 0px;
+    position: relative;
+    height: 20px;
+    background-color: #709FC9;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: small;
+}
+
+.rowhead.toprow {
+    border-top-left-radius: 7px;
+}
+
+#footbar {
+    margin: 0px;
+    padding-top: 2px;
+    background-color: #aaa;
+    color: black;
+    border-top: 2px black solid;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    text-align:center;
+}
+
+ul.bar li {
+    display: inline-block;
+    float: left;
+    height: 25px;
+    font-size: 11pt;
+}
+
+ul.bar li.last {
+
+}
+
+ul.bar {
+    padding: 0px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 25px;
+    background-color: #aaa;
+    text-align: center;
+}
+
+ul.bar.topbar {
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+}
+
+/* BAR BUTTONS */
+button {
+    border: 0px;
+    padding: 0px 10px;
+    outline: 0px;
+    position: relative;
+    height: 25px;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: small;
+}
+
+button:hover {
+    background-color: #AB1722;
+}
+
+button.lite {
+    background-color: transparent;
+    font-size: small;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+button.lite:hover {
+    color: #AB1722 !important;
+    background-color: transparent;
+}
+
+button.selected {
+    background-color: #83A854;
+}
+
+/* OL3 ELEMENTS */
+.map {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 450px;
+}
+
+.ol-zoom {
+    font-family: Georgia, serif;
+    color: black !important;
+    background-color: white;
+}
+
+.ol-zoom-in, .ol-zoom-out {
+    color: black !important;
+    background-color: #709FC9 !important;      
+}
+
+.ol-attribution {
+    color: red !important;
+    background-color: white !important;
+    font-color: red;
+}
+
+.ol-attribution ul {
+    color: black !important;
+    /*display: block !important;*/
+}
+      
+.ol-attribution ul li {
+    display: list-item !important;          
+}
+
+.ol-mouse-position {
+    background-color: #709FC9;
+    padding: 4px 8px 4px 8px;
+    border: 2px solid white;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: small;
+    border-radius: 4px;
+}
+
+.ol-has-tooltip {
+    color: black;
+}
+
+.ol-control button {
+    color: black;
+}
+
+/* LEGEND BOXES */
+.info-box {
+    margin-top: -96px;
+    position: absolute;
+    padding: 10px;
+    width: 855px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
