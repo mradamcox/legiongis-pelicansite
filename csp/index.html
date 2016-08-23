@@ -101,65 +101,6 @@
             </div>
             
         </div>
-        
-        <div class="row wcr-entry wcr-index" style="padding-bottom:0px;">
-            <div class="col-xs-12">
-                <h3>GIS-Based Sinkhole Survey</h3>
-            </div>
-            <div class="col-xs-12">
-            
-                <p>Participants: Please begin by reading the instructions and background <a href="https://s3-us-west-2.amazonaws.com/legiongis.com/img/Sinkholes-Volunteer_Guide.pdf">here</a>, and then click <a href="http://opengeo.legiongis.com/geoexplorer/composer/#maps/4">here</a> to access the survey interface.</p>
-                <p>To begin the editing process:
-                    <ol>
-                        <li>Login (top right corner) with username = guest and password = guest.</li>
-                        <li>In the layers panel, select the layer you want to edit by clicking its title (it will become highlighted). This is a very important step, as it dictates which features you'll be able to edit in the map.</li>
-                        <li>Find the "Edit" button (look left from the Login button), click the dropdown and select "Modify". You are now ready to begin editing points.</li>
-                    </ol>
-                To edit points:
-                    <ol>
-                        <li>Click on a point to open its attribute table.</li>
-                        <li>Click "Edit" in the bottom left corner.</li>
-                        <li>Enter information in the table.</li>
-                        <li>Click "Save" and close the table.</li>
-                    </ol>
-                </p>
-                <p>Below is a map that will live update with our progress. The sinks are layered by depth.<br><strong><span style="color:green">green are confirmed</span><br><span style="color:#ff0000">red are not sinkholes</span><br><span style="color:#0000ff">blue are questionable</span><br><span style="color:#bda691">tan have not yet been checked</span><br>black are excluded (fall within 30ft of a road centerline or within a flood zone)</strong></p>
-                <div class="content-map">
-                    <div id="mapbar">
-                        <div>
-                            <ul id="bmlist" class="bar topbar">
-                                <li class="rowhead toprow"><b>BASEMAP</b></li>
-                                <li><button id="slope" class="layer wide bm" class="selected">slope</button></li>
-                                <li><button id="hillshade" class="layer wide bm">hillshade</button></li>
-                                <li><button id="blank" class="layer bm"><em>blank</em></button></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <ul id="overlist" class="bar">
-                                <li class="rowhead"><b>SINKS</b></li>
-                                <li><button id="s10" class="layer hm">10+ ft</button></li>
-                                <li><button id="s5-10" class="layer hm">5-10 ft</button></li>
-                                <li><button id="s2-5" class="layer hm">2-5 ft</button></li>
-                                <li><button id="s1-2" class="layer hm">1-2 ft</button></li>
-                                <li><button id="blank" class="layer hm"><em>none</em></button></li>
-                            </ul>
-                        </div>
-                        
-                    </div>
-                        
-                    
-                    <div id="map" class="map"></div>
-                    
-                    <div class="info-box" id="layer-info" style="display:none"></div>
-                    
-                    <div id="footbar">
-                        <!--<b>layer info</b> <button id="toggleinfo" class="lite">show</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>accuracy note</b> <button id="togglenote" class="lite">show</button>-->
-                    </div>
-                </div>
-                <script src="../theme/js/crawford-sink-display.js" type="text/javascript"></script>
-            </div>
-            
-        </div>
 
         <div class="row wcr-entry wcr-index" style="padding-bottom:0px;">
             <div class="col-xs-12">
