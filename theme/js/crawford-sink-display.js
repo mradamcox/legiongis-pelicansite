@@ -108,8 +108,8 @@ var sinks2_5 = {
     })
 };
 
-var sinks5_10 = {
-    id: "s5-10",
+var sinks5 = {
+    id: "s5",
     info: "sinkholes",
     layer: new ol.layer.Tile({
         name: 'sinks',
@@ -118,24 +118,7 @@ var sinks5_10 = {
             params: {
                 'LAYERS':'crawford_co:sink_eval',
                 'TILED':true,
-                'cql_filter':"depth_ft BETWEEN 5.0 AND 10.0",
-            },
-            serverType: 'geoserver'
-        }),
-    })
-};
-
-var sinks10 = {
-    id: "s10",
-    info: "sinkholes",
-    layer: new ol.layer.Tile({
-        name: 'sinks',
-        source: new ol.source.TileWMS({
-            url: 'http://legiongis.com/geoserver/wms/',
-            params: {
-                'LAYERS':'crawford_co:sink_eval',
-                'TILED':true,
-                'cql_filter':"depth_ft >= 10.0",
+                'cql_filter':"depth_ft >= 5.0",
             },
             serverType: 'geoserver'
         }),
@@ -154,11 +137,11 @@ var blank = {
 };
 
 var basemaps = [slope,hillshade,aerial,blank];
-var sink_layers = [sinks1_2,sinks2_5,sinks5_10,sinks10,blank];
+var sink_layers = [sinks1_2,sinks2_5,sinks5,blank];
 $('#slope').addClass('selected');
-$('#s10').addClass('selected');
+$('#s5').addClass('selected');
 
-var collection = new ol.Collection([slope.layer,muni.layer,sinks10.layer]);
+var collection = new ol.Collection([slope.layer,muni.layer,sinks5.layer]);
 
 var info_shown = false
 
