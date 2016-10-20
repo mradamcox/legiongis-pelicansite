@@ -14,9 +14,9 @@ var slope = {
     layer: new ol.layer.Tile({
         name: 'slope',
         source: new ol.source.TileWMS({
-            url: 'http://legiongis.com/geoserver/wms/',
+            url: 'http://www.legiongis.com/geoserver/wms/',
             params: {
-                'LAYERS':'crawford_co:Crawford_Slope-5ft',
+                'LAYERS':'crawford_co:Crawford_Slope-3857',
                 'TILED':false,
             },
             serverType: 'geoserver'
@@ -30,9 +30,9 @@ var hillshade = {
     layer: new ol.layer.Tile({
         name: 'hillshade',
         source: new ol.source.TileWMS({
-            url: 'http://legiongis.com/geoserver/wms/',
+            url: 'http://www.legiongis.com/geoserver/wms/',
             params: {
-                'LAYERS':'crawford_co:Crawford_Hillshade-5ft',
+                'LAYERS':'crawford_co:Crawford_Hillshade-3857',
                 'TILED':true,
             },
             serverType: 'geoserver'
@@ -46,7 +46,7 @@ var aerial = {
     layer: new ol.layer.Tile({
         name: 'aerial',
         source: new ol.source.TileWMS({
-            url: 'http://legiongis.com/geoserver/wms/',
+            url: 'http://www.legiongis.com/geoserver/wms/',
             params: {
                 'LAYERS':'crawford_co:crawford_muni',
                 'TILED':true,
@@ -64,7 +64,7 @@ var muni = {
     layer: new ol.layer.Tile({
         name: 'muni',
         source: new ol.source.TileWMS({
-            url: 'http://legiongis.com/geoserver/wms/',
+            url: 'http://www.legiongis.com/geoserver/wms/',
             params: {
                 'LAYERS':'crawford_co:crawford_muni',
                 'TILED':true,
@@ -80,7 +80,7 @@ var sinks1_2 = {
     layer: new ol.layer.Tile({
         name: 'sinks',
         source: new ol.source.TileWMS({
-            url: 'http://legiongis.com/geoserver/wms/',
+            url: 'http://www.legiongis.com/geoserver/wms/',
             params: {
                 'LAYERS':'crawford_co:sink_eval',
                 'TILED':true,
@@ -97,7 +97,7 @@ var sinks2_5 = {
     layer: new ol.layer.Tile({
         name: 'sinks',
         source: new ol.source.TileWMS({
-            url: 'http://legiongis.com/geoserver/wms/',
+            url: 'http://www.legiongis.com/geoserver/wms/',
             params: {
                 'LAYERS':'crawford_co:sink_eval',
                 'TILED':true,
@@ -114,7 +114,7 @@ var sinks5 = {
     layer: new ol.layer.Tile({
         name: 'sinks',
         source: new ol.source.TileWMS({
-            url: 'http://legiongis.com/geoserver/wms/',
+            url: 'http://www.legiongis.com/geoserver/wms/',
             params: {
                 'LAYERS':'crawford_co:sink_eval',
                 'TILED':true,

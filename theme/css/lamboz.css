@@ -6,7 +6,8 @@ BODY,P,DIV, UL LI, OL LI, TD {
 
 
 H1,H2,H3,H4,H5,H6 {
-  font-family:"Lato",sans-serif;
+  font-family: 'Racing Sans One', cursive;
+  font-family: 'Lato', sans-serif;
   font-weight: 600;
   color: #777;
 }
