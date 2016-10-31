@@ -24,64 +24,73 @@
     <!-- Latest compiled JavaScript -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     
-    <!--<link rel="stylesheet" href="./theme/css/foundation.min.css" media="all">-->
-    <script type="text/javascript" src="./theme/js/modernizr.js"></script>
     <script type="text/javascript" src="./theme/js/general.js"></script>
     
-    
+    <!-- all the hottest fonts from google fonts -->
     <link href='https://fonts.googleapis.com/css?family=Exo+2:400,300,700,300italic,400italic,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     
-    
+    <!-- local css files -->
     <link rel="stylesheet" href="./theme/css/lamboz.css" media="all">
     <link rel="stylesheet" href="./theme/css/legiontheme.css" media="all">
     
+    <!-- blue imp gallery currently locally hosted -->
+    <link rel="stylesheet" href="./theme/plugins/Gallery-2.21.3/css/blueimp-gallery.min.css">
     
-    <title>Using QGIS, GeoServer, and PostGIS to Make and Maintain Arches Overlays - Legion GIS</title>
+    <title>    Using QGIS, GeoServer, and PostGIS to Make and Maintain Arches Overlays - Legion GIS, LLC
+</title>
     <meta charset="utf-8" />
-    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Legion GIS Full Atom Feed" />
-    <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Legion GIS Full RSS Feed" />
+    <link href="http://legiongis.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Legion GIS, LLC Full Atom Feed" />
+    <link href="http://legiongis.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Legion GIS, LLC Full RSS Feed" />
         
 </head>
 <body>
-    <div class="content">
-        <div class="container main-container">
-            <div class="row main-row">
+    <div class="container-fluid content">
+        <div class="row">
+            <div class="col-xs-12 col-flush">
                 <div class="pages">
-                    <ul style="text-align:center; margin-bottom:0 !important;">
-                            <li ><a href="./index.html">Home</a></li>
-                            <li ><a href="./pages/services.html">Services</a></li>
-                            <li ><a href="./pages/team.html">Team</a></li>
-                            <li ><a href="./pages/blog.html">Blog</a></li>
-                            <li ><a href="./pages/contact.html">Contact</a></li>
+                    <ul style="text-align:center; margin-bottom:0 !important; padding:0px;">
+                        <li class=""><a href="./index.html"><img src="https://s3-us-west-2.amazonaws.com/legiongis.com/img/whitelogo.png" style="width:225px"></img></a></li>
+                        <li class=""><a href="./services.html">services</a></li>
+                        <li class=""><a href="./background.html">background</a></li>
+                        <li class=" active "><a href="./blog.html">blog</a></li>
                     </ul>
                 </div>
             </div>
-    <meta name="description" content="Someone got in touch with me recently about using GeoServer to serve custom-made (and _maintainable_) vector overlays to the Arches MAP VIEW, in order to add specific study/research areas to the map. This can be achieved with a graceful integration of some solid open source technologies that Arches is primed to handle. Functionally, wouldn't it be great to edit your vector layers in Quantum GIS, and have the updates immediately visible in your Arches overlays?" />
-
-<div class="hp-header-inner">
-    <div class="page-header">
-        <div class="content-header">
-            <div id="title-block">
-            <h1>  <a href="./using-qgis-geoserver-and-postgis-to-make-and-maintain-arches-overlays.html" rel="bookmark"
-                    title="Permalink to Using QGIS, GeoServer, and PostGIS to Make and Maintain Arches Overlays">Using QGIS, GeoServer, and PostGIS to Make and Maintain Arches Overlays</a></h1>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-flush">
+        <meta name="description" content="Someone got in touch with me recently about using GeoServer to serve custom-made (and _maintainable_) vector overlays to the Arches MAP VIEW, in order to add specific study/research areas to the map. This can be achieved with a graceful integration of some solid open source technologies that Arches is primed to handle. Functionally, wouldn't it be great to edit your vector layers in Quantum GIS, and have the updates immediately visible in your Arches overlays?" />
+    <!--
+    <div class="hp-header-inner"  style="height:100px;">
+        <div class="page-header">
+            <div class="content-header">
+                <div id="title-block">
+                    <p class="blurb"><em>Using QGIS, GeoServer, and PostGIS to Make and Maintain Arches Overlays</em></p>
+                <h1></h1>
+                <h2></h2>
+                </div>
             </div>
         </div>
     </div>
-</div>
-            <div class="row content-row" style="padding:20px 0px;">
-                    <div class="container">
-                        <div class="row">
-                           <div class="col-sm-12 col-md-10">
-<div class="content-article">
-    <header class="header-article">
-        <div class="read-more">Posted on Wed 23 March 2016, by Adam Cox</div>
- 
-   </header>
-    <section class='article'>
-        <div class="entry-content">
-            <p>Someone got in touch with me recently about using GeoServer to serve custom-made (and <em>maintainable</em>) vector overlays to the Arches MAP VIEW, in order to add specific study/research areas to the map. This can be achieved with a graceful integration of some solid open source technologies that Arches is primed to handle. Functionally, wouldn't it be great to edit your vector layers in Quantum GIS, and have the updates immediately visible in your Arches overlays?</p>
+    -->
+            </div>
+        </div>
+        <div class="row" style="padding-top:10px;">
+            <div class="col-sm-12 col-md-8 col-md-offset-2">
+<div class="col-xs-12">
+    <div class="content-article">
+        <p><a href="./blog.html"><em>&lsaquo; back to blog</em></a></p>
+        <h2>Using QGIS, GeoServer, and PostGIS to Make and Maintain Arches Overlays</h2>
+        <header class="header-article">
+            <h6 class="date-line">Posted on March 23, 2016, by Adam Cox</h6>
+        </header>
+        <section class="article">
+            <div class="entry-content">
+                <p>Someone got in touch with me recently about using GeoServer to serve custom-made (and <em>maintainable</em>) vector overlays to the Arches MAP VIEW, in order to add specific study/research areas to the map. This can be achieved with a graceful integration of some solid open source technologies that Arches is primed to handle. Functionally, wouldn't it be great to edit your vector layers in Quantum GIS, and have the updates immediately visible in your Arches overlays?</p>
 <p>Well, here are my thoughts: </p>
 <p><a href="https://s3-us-west-2.amazonaws.com/legiongis.com/img/qgis-geoserver-postgis-arches.png"><img alt="what's going on" src="https://s3-us-west-2.amazonaws.com/legiongis.com/img/qgis-geoserver-postgis-arches.png" /></a>
 <em>I'm using :XX where a port must be open to allow the appropriate connections. (It's pretty slick to re-route GeoServer to run through port :80 (instead of :8080) with all your other HTTP requests, but that's a detail beyond our needs here...)</em></p>
@@ -193,61 +202,65 @@ Password = postgis<br>
 <hr />
 <p>It's a lot of steps, but if you live in fantasy-land and don't run into any issues, it shouldn't take more than half an hour or so. And if you can get it to work once, the next time it will be more or less effortless.</p>
 <p>We don't have comments on our blog yet, but feel free to contact me (address on footer below) with any problems or questions.  </p>
-        </div>
-    </section>
-    <footer class="footer-article">
-        <div class="tags-and-categories">Filed: <a href="./category/technical.html">technical</a>
-        | Tagged: <a href="./tag/arches.html">Arches </a><a href="./tag/geoserver.html">GeoServer </a><a href="./tag/qgis.html">QGIS </a><a href="./tag/postgis.html">PostGIS </a>    </footer>
-</div>
-                            </div>
-                            <div class="hidden-xs hidden-sm col-md-2">
-                                <h5>Shortcuts</h5>
-                                <ul class="links">
-                                    <li><a href="./pages/services/arches.html">Arches</a></li>
-                                    <li><a href="./pages/services/cartography.html">Cartography</a></li>
-                                    <li><a href="./pages/services/education.html">Education</a></li>
-                                    <li><a href="./pages/introduction-to-gis.html">Intro QGIS Class</a></li>
-                                    <li><a href="./csp/index.html">WCR Karst Survey</a></li>
-                                </ul>
-                                <h5>Our Tools</h5>
-                                <ul class="links">
-                                    <li><a href="http://qgis.org/">Quantum GIS</a></li>
-                                    <li><a href="http://esri.com/">ArcGIS</a></li>
-                                    <li><a href="http://archesproject.org/">Arches</a></li>
-                                    <li><a href="http://gimp.org">GIMP</a></li>
-                                    <li><a href="http://geoserver.org">GeoServer</a></li>
-                                    <li><a href="http://inkscape.org">Inkscape</a></li>
-                                    <li><a href="http://python.org/">Python</a></li>
-                                    <li><a href="https://aws.amazon.com/">Amazon Web Services</a></li>
-                                    <li><a href="http://getpelican.com/">Pelican</a></li>
-                                    <li><a href="https://www.mapbox.com/tilemill/">TileMill</a></li>
-                                </ul>
-                                <h5>Blog Feeds</h5>
-                                <ul class="links">
-                                    <li><a href="/feeds/all.atom.xml" rel="alternate">Atom</a></li>
-                                    <li><a href="/feeds/all.rss.xml" rel="alternate">RSS</a></li>
-                                </ul>
-                                
-                            </div>
-                        </div>
-                    </div>
+                <!--<p><a href="./"><em>view map in full screen</em></a></p>-->
             </div>
+        </section>
+        <footer class="footer-article">
+            <hr class="hr-slight">
+            <div class="tags-and-categories">Filed: <a href="./category/technical.html">technical</a>
+            | Tagged: <a href="./tag/arches.html">Arches </a><a href="./tag/geoserver.html">GeoServer </a><a href="./tag/qgis.html">QGIS </a><a href="./tag/postgis.html">PostGIS </a>        </footer>
+    </div>
+</div>
+            </div>
+            <!--
+            <div class="hidden-xs hidden-sm col-md-2">
+                <h5>Shortcuts</h5>
+                <ul class="links">
+                    <li><a href="./pages/services/arches.html">Arches</a></li>
+                    <li><a href="./pages/services/cartography.html">Cartography</a></li>
+                    <li><a href="./pages/services/education.html">Education</a></li>
+                    <li><a href="./pages/introduction-to-gis.html">Intro QGIS Class</a></li>
+                    <li><a href="./csp/index.html">WCR Karst Survey</a></li>
+                </ul>
+                <h5>Our Tools</h5>
+                <ul class="links">
+                    <li><a href="http://qgis.org/">Quantum GIS</a></li>
+                    <li><a href="http://esri.com/">ArcGIS</a></li>
+                    <li><a href="http://archesproject.org/">Arches</a></li>
+                    <li><a href="http://gimp.org">GIMP</a></li>
+                    <li><a href="http://geoserver.org">GeoServer</a></li>
+                    <li><a href="http://inkscape.org">Inkscape</a></li>
+                    <li><a href="http://python.org/">Python</a></li>
+                    <li><a href="https://aws.amazon.com/">Amazon Web Services</a></li>
+                    <li><a href="http://getpelican.com/">Pelican</a></li>
+                    <li><a href="https://www.mapbox.com/tilemill/">TileMill</a></li>
+                </ul>
+                <h5>Blog Feeds</h5>
+                <ul class="links">
+                    <li><a href="http://legiongis.com/feeds/all.atom.xml" rel="alternate">Atom</a></li>
+                    <li><a href="http://legiongis.com/feeds/all.rss.xml" rel="alternate">RSS</a></li>
+                </ul>
+                
+            </div>
+            -->
         </div>
     </div>
+    
     <div class="footer" style="text-align:center">
-        <div class="container">
-            <div class="row" style="padding:15px 0px; margin-left:0px; margin-right:0px; max-width:none;">
+        <div class="container-fluid">
+            <div class="row" style="padding:5px 0px;">
                 <div class="col-sm-4">
-                    <p>Site updated Oct 20, 2016 (<a href="https://github.com/mradamcox/legiongis-pelicansite/commits/master">view commits</a>)</p>
+                    <p>site updated Oct 31, 2016 (<a href="https://github.com/mradamcox/legiongis-pelicansite/commits/master">view commits</a>)</p>
                 </div>
                 <div class="col-sm-4">
                     <p><a id="email-address"></a> | 608-606-9928</p>
                 </div>
                 <div class="col-sm-4">
-<p>Powered by <a href="http://getpelican.com/">Pelican</a>, theme based on <a href="https://github.com/getpelican/pelican-themes/tree/master/bricks">bricks</a></p>                </div>
+<p>powered by <a href="http://getpelican.com/">pelican</a>, <a href="https://github.com/mradamcox/legiongis-pelicansite-src">legiontheme</a> based on <a href="https://github.com/getpelican/pelican-themes/tree/master/bricks">bricks</a></p>                </div>
             </div>
             </div>
         </div>
+    </div>
     </div>
     <script>
         var c1 = "info";

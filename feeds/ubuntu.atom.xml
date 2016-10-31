@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Legion GIS</title><link href="/" rel="alternate"></link><link href="/feeds/ubuntu.atom.xml" rel="self"></link><id>/</id><updated>2016-04-07T00:00:00-05:00</updated><entry><title>Serving Arches Apps with Apache on Ubuntu</title><link href="/serving-arches-apps-with-apache-on-ubuntu.html" rel="alternate"></link><updated>2016-04-07T00:00:00-05:00</updated><author><name>Adam Cox</name></author><id>tag:,2016-04-07:serving-arches-apps-with-apache-on-ubuntu.html</id><summary type="html">&lt;p&gt;| column | col |
-+--------+-----+
-|dsan | dfd|
-|qqqqq| 44g4g|&lt;/p&gt;</summary><category term="Arches"></category><category term="Apache"></category><category term="Ubuntu"></category></entry></feed>

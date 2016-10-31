@@ -1,3 +1,28 @@
+body,p,div, ul li, ol li, td {
+  font-family:"Lato",sans-serif;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  /*font-family: 'Racing Sans One', cursive;*/
+  /*font-family: 'Lato', sans-serif;*/
+  /*font-family: 'Roboto', sans-serif;*/
+  font-family: 'Roboto Slab', serif;
+  font-weight: 600;
+  color: #3B3B3B;
+}
+
+a { 
+  text-decoration: none;
+  color: #637486;
+    font-weight:600;
+}
+
+a:hover {
+  color: #334150;
+}
+
 div#title-block H1 {
     font-size: 6em;
     font-weight: 900;
@@ -31,13 +56,21 @@ img {
 .article-summary {
     background-color: #eee;
     margin-bottom: 0.8em;
-    padding: 1em;
+    padding: 3px 5px;
     border-radius: 5px;
+}
+
+.article-summary-text {
+    font-size: .9em;
+}
+
+.article-summary-title {
+    margin-bottom: 3px;
 }
 
 .date-line {
     font-size: 0.8em;
-    letter-spacing: 2px;
+    font-style: italic;
 }
 
 .headshot {
@@ -45,9 +78,37 @@ img {
 }
 
 .headshot img {
-    width: 80px;
+    width: 100%;
     border: 1px solid rgba(0,0,0,.15);
     border-radius: 5px;
+}
+
+.client-list-box {
+    background-color: #eee;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.client-list {
+    margin: 5px;
+    text-align: center;
+    display: inline;
+}
+
+@media screen and (max-width: 768px) {
+    .client-list {
+        display: inline;
+    }
+}
+
+
+
+.client-list img {
+    max-width:100%;
+    height:auto;
+    max-height: 75px;
+    min-width: 40px;
+    padding-bottom: 15px;
 }
 
 /* this stuff should keeps the footer on the bottom of the page */
@@ -60,7 +121,9 @@ html, body {
 body { 
     display: table; 
     width: 100%; 
-    height: 100%; 
+    height: 100%;
+    /*background:url('https://s3-us-west-2.amazonaws.com/legiongis.com/img/kvr_background_wide.png') no-repeat center center fixed;
+    background-size:cover;*/
 }
 
 
@@ -75,7 +138,6 @@ body {
 .content {
     height:auto;
     width:100%;
-    padding:0px;
 }
 
 .main-container {
@@ -83,13 +145,9 @@ body {
     width: 100%;
 }
 
-.main-row {
-    max-width: none;
-}
-
-.content-row {
-    max-width: none;
-    padding: 25px 0px;
+.col-flush {
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
 .footer {
@@ -97,10 +155,19 @@ body {
     height: 1px;
     background-color: #637486;
     color: #FFF;
+    padding: 10px;
 }
 
-.footer p{
-    font-size: 12pt;
+.footer p {
+    font-size: 8pt;
+}
+
+.footer p a {
+    font-weight: 400;
+}
+
+.footer-article {
+    padding-botton:10px;
 }
 
 /* slider gallery stuff */
@@ -122,8 +189,6 @@ body {
     padding: 1px;
     width: 600px;
 }
-    
-/* ... */
 
 .arches-project-image img {
     width: 100%;
@@ -170,7 +235,7 @@ pre, ol, ul {
   display:table;
   width:100%;
   /*height:55%;*/
-  height:150px;
+  height:115px;
   /*max-height: 55px;*/
   position:relative;
   background:url('https://s3-us-west-2.amazonaws.com/legiongis.com/img/kvr_background_wide.png') no-repeat center center fixed;
@@ -182,15 +247,102 @@ pre, ol, ul {
   display:table;
   width:100%;
   /*height:30%;*/
-  height:150px;
+  height:115px;
   position:relative;
   background:url('https://s3-us-west-2.amazonaws.com/legiongis.com/img/kvr_background_wide.png') no-repeat center center fixed;
   background-size:cover;
 
 }
 
-.hp-header-inner  #title-block H1 {
-  font-size:4em;
+.hp-header-inner  #title-block h1 {
+  font-family: 'Roboto Slab';
+  font-size:3em;
   color:white;
   text-align:center
+}
+
+/* Navbar */
+
+.pages {
+    background-color: #637486;
+    color: white;
+}
+
+.pages ul {
+  list-style-type: none;
+  margin: 0px;
+}
+
+.pages ul li {
+  display: inline-block;
+  padding: 5px 15px;
+}
+/*
+.pages ul li:nth-child(1) {
+  font-size: 1.4em;
+}
+*/
+.pages ul li a {
+    color: white;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-family: 'roboto slab';
+    font-size: 14pt;
+    
+}
+
+.pages ul li.active {
+  background-color: #334150;
+  border:none;
+}
+
+.hr-slight {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.section-header {
+    width: 100%;
+    text-align: left;
+    border-bottom: 2px dotted #b8b8b8;
+    line-height: 0.1em;
+    margin: 20px 0px 15px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.section-header span {
+    background: #fff;
+    padding-right: 10px;
+    font-weight: 600;
+}
+
+/* some custom stuff for the map image gallery */
+
+.blueimp-gallery {
+  /*background: #333 !important;*/
+}
+
+.blueimp-gallery > .description {
+  position: absolute;
+  top: 45px;
+  left: 15px;
+  color: #fff;
+  width:175px;
+  display: none;
+  width: 175px;
+  text-shadow: 1px 1px #080808;
+  background: #637486;
+  padding: 5px;
+  border-radius: 5px
+}
+.blueimp-gallery-controls > .description {
+  display: block;
+}
+
+.quick-link-list {
+}
+
+.quick-link-list li {
+    /*list-style-type: none;*/
 }

@@ -210,33 +210,30 @@ function selectOverlay() {
 };
 
 function toggleInfo() {
-    var current_overlay = collection.getArray()[0];
-    var info_text = current_overlay.info;
-    $("#toggleinfo").click(function(){
-        if ($("#layer-info").is(":hidden")) {
-            $("#layer-info").show();
-            document.getElementById('toggleinfo').innerHTML = "hide";
+    $("#toggleinfo1").click(function(){
+        if ($("#info1").is(":hidden")) {
+            $("#info1").show();
+            document.getElementById('toggleinfo1').innerHTML = "hide legend";
         } else {
-            $("#layer-info").hide();
-            document.getElementById('toggleinfo').innerHTML = "show";
+            $("#info1").hide();
+            document.getElementById('toggleinfo1').innerHTML = "show legend";
         }
     });
 };
 
 function toggleNote() {
-    $("#togglenote").click(function(){
-        if ($("#accuracy-box").is(":hidden")) {
-            $("#accuracy-box").show();
-            document.getElementById('togglenote').innerHTML = "hide";
+    $("#toggleinfo2").click(function(){
+        if ($("#info2").is(":hidden")) {
+            $("#info2").show();
+            document.getElementById('toggleinfo2').innerHTML = "hide basemap info";
         } else {
-            $("#accuracy-box").hide();
-            document.getElementById('togglenote').innerHTML = "show";
+            $("#info2").hide();
+            document.getElementById('toggleinfo2').innerHTML = "show basemap info";
         }
     });
 };
 
 $(document).ready(function() {
-    document.getElementById('layer-info').innerHTML = slope.info
     toggleInfo();
     toggleNote();
     selectOverlay()

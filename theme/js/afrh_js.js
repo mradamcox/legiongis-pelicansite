@@ -63,7 +63,7 @@ var hybrid = {
 
 var hm1850 = {
     id: "1850",
-    info: "this is the original plat of the George W. Riggs farm",
+    info: "c. 1851 plat map of the George W. Riggs Property, which was purchased by the federal government in 1851 to establish the Washington branch of the U.S. Military Asylum, later to become AFRH-W; (image courtesy of the National Archives Records Administration, Washington, D.C.; filed under “Plat Map of the George W. Rigge’s [sic] Property”)",
     layer: new ol.layer.Tile({
         name: '1850',
         source: new ol.source.TileWMS({
@@ -79,7 +79,7 @@ var hm1850 = {
 
 var hm1865 = {
     id: "1865",
-    info: "this is the Barnard map",
+    info: "<em>Map of the Environs of Washington Compiled from Boschke’s Map of the District of Columbia and from Surveys of the U.S. Coast Survey Showing the Line of the Defences of Washington as Constructed During the War from 1861 to 1865—Inclusive</em>, to accompany the report by Brevet Major General John G. Barnard, Colonel of Engineers, Late Chief Engineer of Defences, 1865 (image courtesy of the Library of Congress).",
     layer: new ol.layer.Tile({
         name: '1865',
         source: new ol.source.TileWMS({
@@ -95,7 +95,7 @@ var hm1865 = {
 
 var hm1866 = {
     id: "1866-67",
-    info: "this is the Michler Memory map",
+    info: "<em>Topographical Sketch of the Environs of Washington, D.C.</em>, to accompany report of Nathanial Michler, topographical engineer for the Federal Army, made in compliance with Senate Resolution of 18 July 1866, Survey of Locality for Public Park of Site for a Presidential Mansion. Approved by Committee of Public Buildings and Grounds of the Senate 20 February 1867 (image courtesy of the Library of Congress).",
     layer: new ol.layer.Tile({
         name: '1866',
         source: new ol.source.TileWMS({
@@ -111,7 +111,7 @@ var hm1866 = {
 
 var hm1873 = {
     id: "1873",
-    info: "this is the Bootes map",
+    info: "<em>Map of Soldiers’ Home near Washington, D.C.</em>, compiled from surveys by S. Bootes, Lewis Carbery, and B.D. Carpenter; American Photo-Lithograph Company, New York, 1873 (image courtesy of the Library of Congress).",
     layer: new ol.layer.Tile({
         name: '1873',
         source: new ol.source.TileWMS({
@@ -127,7 +127,7 @@ var hm1873 = {
 
 var hm1877 = {
     id: "1877",
-    info: "this is the JC Entwhistle map",
+    info: "<em>Map of Soldiers’ Home Near Washington, D.C.</em>, J.C. Entiwistle Lithographs, 1877 (image courtesy of the Library of Congress).",
     layer: new ol.layer.Tile({
         name: '1877',
         source: new ol.source.TileWMS({
@@ -143,7 +143,7 @@ var hm1877 = {
 
 var hm1892 = {
     id: "1892",
-    info: "this is the beautiful USGS map",
+    info: "This is the georgeous United States Geological Survey Map, Washington West, 7-1/2 minute topographic quadrangle map (image courtesy of USGS)",
     layer: new ol.layer.Tile({
         name: '1892',
         source: new ol.source.TileWMS({
@@ -159,7 +159,7 @@ var hm1892 = {
 
 var hm1903 = {
     id: "1903",
-    info: "this is the Army Corps of Engineers map",
+    info: "<em>Map of the U.S. Soldiers’ Home, Washington D.C.</em>, surveyed by 1st Lieutenant P.S. Bond, Corps of Engineers of the U.S. Army, June 1903 (image courtesy of the National Archives Records Administration, Washington, D.C.). Map notes that the survey was based on U.S. C. and G.S. topography of 1892 and boundary survey of William H. Benton in 1902, revised by E.T. Cudworth 15 December 1908, and revised 1 September 1910. This map is one of the most detailed records of physical conditions of the U.S. Soldiers’ Home during the height of its development.",
     layer: new ol.layer.Tile({
         name: '1903',
         source: new ol.source.TileWMS({
@@ -175,7 +175,7 @@ var hm1903 = {
 
 var hm1914 = {
     id: "1914",
-    info: "topographical map from 1914",
+    info: "<em>Map of the U.S. Soldiers’ Home</em>; map notes that the topographical contour lines shown are traced from a map made from the original survey of 1892, with revisions made to show the exact locations of buildings, roads, walks, surface, and subsurface drains as they were on 20 July 1914. This map is one of the most detailed records of physical conditions of the U.S. Soldiers’ Home during the height of its development. (image courtesy of AFRH-W).",
     layer: new ol.layer.Tile({
         name: '1914',
         source: new ol.source.TileWMS({
@@ -191,7 +191,7 @@ var hm1914 = {
 
 var hm1944 = {
     id: "1944",
-    info: "topographical map from 1944",
+    info: "Topographical survey of the U.S. Soldiers’ Home, November 1944. The map references Porter and Lockie (architect engineer), W.N. Browning (surveyor), William Karunsky (mechanical engineer), and Marshall B. Gongwer (structural engineers). This is the last detailed map and schedule of buildings from the period of significance of the AFRH-W Historic District, prior to the disposition of land and demolition of several buildings in the 1950s.",
     layer: new ol.layer.Tile({
         name: '1944',
         source: new ol.source.TileWMS({
@@ -207,7 +207,7 @@ var hm1944 = {
 
 var hm1953 = {
     id: "1953",
-    info: "this is the Master Plan map",
+    info: "U.S. Soldiers’ Home, Washington, D.C. Existing Water System, prepared by S.E. Sanders-C.H. Turrell & Associates, Land Planners, 15 May 1953 (image courtesy of AFRH-W). Map shows campus prior to disposition of eastern parcel.",
     layer: new ol.layer.Tile({
         name: '1953',
         source: new ol.source.TileWMS({
@@ -223,7 +223,7 @@ var hm1953 = {
 
 var hm1967 = {
     id: "1967",
-    info: "topographical map from 1967",
+    info: "Topographical Map, United States Soldiers’ Home, prepared by Hayes, Seay, Mattern & Mattern, August 1967 (image courtesy of AFRH-W). Map shows campus prior to disposition of eastern parcel.",
     layer: new ol.layer.Tile({
         name: '1967',
         source: new ol.source.TileWMS({
@@ -239,7 +239,7 @@ var hm1967 = {
 
 var hm1975 = {
     id: "1975",
-    info: "this is a schedule of structures",
+    info: "United States Soldiers’ and Airmen’s Home, Schedule of Structures, November 1975 (image courtesy of AFRH-W). Map shows campus prior to disposition of eastern parcel.",
     layer: new ol.layer.Tile({
         name: '19575',
         source: new ol.source.TileWMS({
@@ -355,10 +355,10 @@ function toggleInfo() {
     $("#toggleinfo").click(function(){
         if ($("#layer-info").is(":hidden")) {
             $("#layer-info").show();
-            document.getElementById('toggleinfo').innerHTML = "hide";
+            document.getElementById('toggleinfo').innerHTML = "hide overlay info";
         } else {
             $("#layer-info").hide();
-            document.getElementById('toggleinfo').innerHTML = "show";
+            document.getElementById('toggleinfo').innerHTML = "show overlay info";
         }
     });
 };
@@ -367,10 +367,10 @@ function toggleNote() {
     $("#togglenote").click(function(){
         if ($("#accuracy-box").is(":hidden")) {
             $("#accuracy-box").show();
-            document.getElementById('togglenote').innerHTML = "hide";
+            document.getElementById('togglenote').innerHTML = "hide accuracy note";
         } else {
             $("#accuracy-box").hide();
-            document.getElementById('togglenote').innerHTML = "show";
+            document.getElementById('togglenote').innerHTML = "show accuracy note";
         }
     });
 };

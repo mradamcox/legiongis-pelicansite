@@ -1,0 +1,85 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+    <!-- OpenLayers JS -->
+    <script src="http://openlayers.org/en/v3.0.0/build/ol.js" type="text/javascript"></script>
+    <!-- OpenLayers CSS -->
+    <link rel="stylesheet" href="http://openlayers.org/en/v3.0.0/css/ol.css" type="text/css">
+    
+    <!-- local css files -->
+    <link rel="stylesheet" href="../theme/css/lamboz.css" media="all">
+    <link rel="stylesheet" href="../theme/css/legiontheme.css" media="all">
+    
+    <!-- local CSS -->
+    <link rel="stylesheet" href="../theme/css/overlay-map.css" type="text/css">
+</head>
+<body>
+    <div class="container-fluid" style="">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="map-bar">
+                    <ul id="bmlist" class="bar topbar">
+                        <li class="rowhead toprow"><p><strong>BASEMAP</strong></p></li>
+                        <li><button id="osm" class="layer wide bm" class="selected">open street map</button></li>
+                        <li><button id="imagery" class="layer wide bm">aerial imagery</button></li>
+                        <li><button id="blank" class="layer bm"><em>blank</em></button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="map-bar">
+                    <ul id="overlist" class="bar">
+                        <li class="rowhead"><p><strong>OVERLAY</strong></p></li>
+                        <li><button id="1850" class="layer hm">1850</button></li>
+                        <li><button id="1865" class="layer hm">1865</button></li>
+                        <li><button id="1866-67" class="layer hm">1866-67</button></li>
+                        <li><button id="1873" class="layer hm">1873</button></li>
+                        <li><button id="1877" class="layer hm">1877</button></li>
+                        <li><button id="1892" class="layer hm">1892</button></li>
+                        <li><button id="1903" class="layer hm">1903</button></li>
+                        <li><button id="1914" class="layer hm">1914</button></li>
+                        <li><button id="1944" class="layer hm">1944</button></li>
+                        <li><button id="1953" class="layer hm">1953</button></li>
+                        <li><button id="1967" class="layer hm">1967</button></li>
+                        <li><button id="1975" class="layer hm">1975</button></li>
+                        <li><button id="blank" class="layer hm"><em>none</em></button></li>
+                        <li><button id="temp-remove" class="layer"><em>-/+</em></button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="map" class="map"></div>
+            </div>
+            <div class="col-xs-12">
+                <div class="info-box" id="layer-info" style="display:none"></div>
+            </div>
+            <div class="col-xs-12">
+                <div class="info-box" id="accuracy-box" style="display:none">
+                The process of placing historic maps on current maps ("georeferencing") is done by matching points on the historic map to corresponding points on a current basemap. It is not an exact process. In these examples, one will notice that the historical documents fit well in some places, and badly in others. Thus, historic maps are best considered as showing features in their current day <em>vicinity</em>, not exact location.
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="footbar">
+                    <button id="toggleinfo" class="lite">show overlay info</button><button id="togglenote" class="lite">show accuracy note</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../theme/js/afrh_js.js" type="text/javascript"></script>
+</body>

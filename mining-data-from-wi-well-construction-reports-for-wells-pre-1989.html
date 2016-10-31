@@ -1,0 +1,168 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+
+    <!-- Google Analytics Tracking -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-74344100-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript" src="./theme/js/general.js"></script>
+    
+    <!-- all the hottest fonts from google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Exo+2:400,300,700,300italic,400italic,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    
+    <!-- local css files -->
+    <link rel="stylesheet" href="./theme/css/lamboz.css" media="all">
+    <link rel="stylesheet" href="./theme/css/legiontheme.css" media="all">
+    
+    <!-- blue imp gallery currently locally hosted -->
+    <link rel="stylesheet" href="./theme/plugins/Gallery-2.21.3/css/blueimp-gallery.min.css">
+    
+    <title>    Mining Data From WI Well Construction Reports (for wells pre-1989) - Legion GIS, LLC
+</title>
+    <meta charset="utf-8" />
+    <link href="http://legiongis.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Legion GIS, LLC Full Atom Feed" />
+    <link href="http://legiongis.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Legion GIS, LLC Full RSS Feed" />
+        
+</head>
+<body>
+    <div class="container-fluid content">
+        <div class="row">
+            <div class="col-xs-12 col-flush">
+                <div class="pages">
+                    <ul style="text-align:center; margin-bottom:0 !important; padding:0px;">
+                        <li class=""><a href="./index.html"><img src="https://s3-us-west-2.amazonaws.com/legiongis.com/img/whitelogo.png" style="width:225px"></img></a></li>
+                        <li class=""><a href="./services.html">services</a></li>
+                        <li class=""><a href="./background.html">background</a></li>
+                        <li class=" active "><a href="./blog.html">blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-flush">
+        <meta name="description" content="A wealth of information exists in well construction reports (WCRs), some of which is valuable when you are looking for evidence of karst geology. The ..." />
+    <!--
+    <div class="hp-header-inner"  style="height:100px;">
+        <div class="page-header">
+            <div class="content-header">
+                <div id="title-block">
+                    <p class="blurb"><em>Mining Data From WI Well Construction Reports (for wells pre-1989)</em></p>
+                <h1></h1>
+                <h2></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+            </div>
+        </div>
+        <div class="row" style="padding-top:10px;">
+            <div class="col-sm-12 col-md-8 col-md-offset-2">
+<div class="col-xs-12">
+    <div class="content-article">
+        <p><a href="./blog.html"><em>&lsaquo; back to blog</em></a></p>
+        <h2>Mining Data From WI Well Construction Reports (for wells pre-1989)</h2>
+        <header class="header-article">
+            <h6 class="date-line">Posted on August 18, 2016, by Adam Cox</h6>
+        </header>
+        <section class="article">
+            <div class="entry-content">
+                <p>A wealth of information exists in well construction reports (WCRs), some of which is valuable when you are looking for evidence of karst geology. The Wisconsin Geology and Natural History Survey (WGNHS) stores digital archives of all WCRs for wells created before 1989. These come in the form of PDFs, which, though generally legible and full of information, are hard to use for any large scale analysis.</p>
+<p>In order to pull relevant information from these reports (of which there are 1,136 in Crawford County) we set up an interface through which volunteers were able to view each image and easily enter certain pieces of information gleaned from the document. We spent a lot of time working with the Crawford Stewardship Project to discern which specific information should be gathered, knowing that there was a fine balance to strike between asking too much of the volunteers, and getting too little information.</p>
+<p>After our first 2 hours of effort, we pulled data from 886 of the 1,136 (78%), leaving only 250. More folks pitched in the following day to finish everything up. You can view the full response spreadsheet <a href="https://docs.google.com/spreadsheets/d/1RdV2OxA6jlCYrHaBD7waGpBJ2_SxZtZP8-NHfOKZe3U/edit#gid=289827408">here</a>, or check out the chart below for a summary of the information we gathered (percentages are out of 1,136).</p>
+<p><img alt="result chart" src="https://s3-us-west-2.amazonaws.com/legiongis.com/img/wcr-full-chart.png" /></p>
+                <!--<p><a href="./"><em>view map in full screen</em></a></p>-->
+            </div>
+        </section>
+        <footer class="footer-article">
+            <hr class="hr-slight">
+            <div class="tags-and-categories">Filed: <a href="./category/news.html">news</a>
+            | Tagged: <a href="./tag/conservation.html">conservation </a>        </footer>
+    </div>
+</div>
+            </div>
+            <!--
+            <div class="hidden-xs hidden-sm col-md-2">
+                <h5>Shortcuts</h5>
+                <ul class="links">
+                    <li><a href="./pages/services/arches.html">Arches</a></li>
+                    <li><a href="./pages/services/cartography.html">Cartography</a></li>
+                    <li><a href="./pages/services/education.html">Education</a></li>
+                    <li><a href="./pages/introduction-to-gis.html">Intro QGIS Class</a></li>
+                    <li><a href="./csp/index.html">WCR Karst Survey</a></li>
+                </ul>
+                <h5>Our Tools</h5>
+                <ul class="links">
+                    <li><a href="http://qgis.org/">Quantum GIS</a></li>
+                    <li><a href="http://esri.com/">ArcGIS</a></li>
+                    <li><a href="http://archesproject.org/">Arches</a></li>
+                    <li><a href="http://gimp.org">GIMP</a></li>
+                    <li><a href="http://geoserver.org">GeoServer</a></li>
+                    <li><a href="http://inkscape.org">Inkscape</a></li>
+                    <li><a href="http://python.org/">Python</a></li>
+                    <li><a href="https://aws.amazon.com/">Amazon Web Services</a></li>
+                    <li><a href="http://getpelican.com/">Pelican</a></li>
+                    <li><a href="https://www.mapbox.com/tilemill/">TileMill</a></li>
+                </ul>
+                <h5>Blog Feeds</h5>
+                <ul class="links">
+                    <li><a href="http://legiongis.com/feeds/all.atom.xml" rel="alternate">Atom</a></li>
+                    <li><a href="http://legiongis.com/feeds/all.rss.xml" rel="alternate">RSS</a></li>
+                </ul>
+                
+            </div>
+            -->
+        </div>
+    </div>
+    
+    <div class="footer" style="text-align:center">
+        <div class="container-fluid">
+            <div class="row" style="padding:5px 0px;">
+                <div class="col-sm-4">
+                    <p>site updated Oct 31, 2016 (<a href="https://github.com/mradamcox/legiongis-pelicansite/commits/master">view commits</a>)</p>
+                </div>
+                <div class="col-sm-4">
+                    <p><a id="email-address"></a> | 608-606-9928</p>
+                </div>
+                <div class="col-sm-4">
+<p>powered by <a href="http://getpelican.com/">pelican</a>, <a href="https://github.com/mradamcox/legiongis-pelicansite-src">legiontheme</a> based on <a href="https://github.com/getpelican/pelican-themes/tree/master/bricks">bricks</a></p>                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        var c1 = "info";
+        var c2 = "@";
+        var c3 = "legiongis.com";
+        var email = c1+c2+c3
+        $(document).ready(function() {
+            document.getElementById('email-address').textContent = email;
+            document.getElementById('email-address').href = "mailto:"+email;
+        });
+    </script>
+</body>
+</html>
