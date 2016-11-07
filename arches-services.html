@@ -83,34 +83,34 @@
     <div class="section-header">
         <span>background</span>
     </div>
-    <p>Arches (<a href="http://www.archesproject.org">www.archesproject.org</a>) is a robust web-based inventory platform designed specifically for cultural heritage resources. Sponsored by the Getty Conservation Institute and World Monuments Fund, Arches is open source software developed by Farallon Geographics. Legion GIS has been fortunate to work closely with all of these organizations to help with support on the <a href="https://groups.google.com/forum/#!forum/archesproject">Arches user forum</a>, co-present at conferences in the US and abroad, and participate in further development of the software. Through all of these activities we've gained extensive experience with the platform, and will be a great resource to facilitate your organization's interest in Arches.</p>
+    <p>Arches (<a href="http://www.archesproject.org">www.archesproject.org</a>) is a robust web-based inventory platform designed specifically for cultural heritage resources. Sponsored by the Getty Conservation Institute and World Monuments Fund, Arches is open source software developed by Farallon Geographics. Legion GIS has been fortunate to work closely with all of these organizations to support the <a href="https://groups.google.com/forum/#!forum/archesproject">Arches user forum</a>, co-present at conferences in the US and abroad, and participate in further development of the software. We've gained extensive experience with the platform, and in dealing with organizations who are interested in using it. From initial design, in-depth custom component integration, existing data migration, and even server hosting, we can help you every step of the way. </p>
     <div class="section-header">
-        <span>demos</span>
+        <span>Arches v3 app examples</span>
     </div>
-    <p><em>Want to try Arches out? Go to any of the Legion-hosted demo sites below, and sign in with username = guest and password = guest. These three apps are examples of what Legion GIS is prepared to create or customize for your organization.</em></p>
+    <p>Below are three examples of Arches v3 apps with which we are very familiar; created two of them, and the final is the default Arches-HIP configuration. <em>Check out the <a href="#demo-section">demo section</a> below to get behind-the-scenes access to cloned "sandbox" versions of these apps.</em></p>
     <div class="col-xs-12">
         <div class="col-sm-3 hidden-xs">
             <div class="arches-project-image">
-                <a href="http://arches3.legiongis.com/afrh">
+                <a href="http://www.afrh-iris.com">
                     <img src="https://s3-us-west-2.amazonaws.com/legiongis.com/img/afrh_home.png"/>
                 </a>
             </div>
         </div>
         <div class="col-xs-12 col-sm-9">
-            <h5><a href="http://arches3.legiongis.com/afrh">AFRH-IRIS app</a></h5>
+            <h5><a href="http://www.afrh-iris.com">AFRH-IRIS</a></h5>
             <p>We worked together with PRESERVE/scapes to create this Arches v3 app for the Armed Forces Retirement Home in Washington DC. We incorporated many historic maps (read about that <a href="/using-historic-maps-of-the-armed-forces-retirement-home.html">here</a>), created a multi-faceted permissions system, and reworked the database system to assist with site management and development project planning. <em><a href="https://github.com/mradamcox/afrh">visit the repo</a></em></p>
         </div>
     </div>
     <div class="col-xs-12">
         <div class="col-sm-3 hidden-xs">
             <div class="arches-project-image">
-                <a href="http://arches3.legiongis.com/crhim">
+                <a href="http://crhim.canerivernha.org">
                     <img src="https://s3-us-west-2.amazonaws.com/legiongis.com/img/crhim_home.png"/>
                 </a>
             </div>
         </div>
         <div class="col-xs-12 col-sm-9">
-            <h5><a href="http://arches3.legiongis.com/crhim">Cane River Historic Inventory &amp; Map</a></h5>
+            <h5><a href="http://crhim.caneriver.org">Cane River Historic Inventory &amp; Map</a></h5>
             <p>Our first work with Arches was to create this app for the Cane River National Heritage Area, in Natchitoches Parish, Louisiana. We created many new map layers (from Sanborn Maps&copy; to high resolution elevation reliefs) to enhance the map view, and migrated many existing datasets to the new installation, including an entire historic cemetery. <em><a href="https://github.com/mradamcox/crip">visit the repo</a></em></p>
         </div>
     </div>
@@ -124,14 +124,28 @@
         </div>
         <div class="col-xs-12 col-sm-9">
             <h5><a href="http://arches3.legiongis.com/hip">Arches-HIP</a></h5>
-            <p>This is a demo version of the Arches Heritage Inventory Package, the default Arches v3 app. Arches-HIP was developed by Farallon Geographics in conjunction with the creation of <a href="http://www.historicplacesla.com">HistoricPlacesLA</a> the first large-scale Arches v3 implementation. <em><a href="https://github.com/archesproject/hip">visit the repo</a></em></p>
+            <p>This is a basic installation of the Arches Heritage Inventory Package, the default Arches v3 app. Arches-HIP was developed by Farallon Geographics in conjunction with the creation of <a href="http://www.historicplacesla.com">HistoricPlacesLA</a> the first large-scale Arches v3 implementation. <em><a href="https://github.com/archesproject/hip">visit the repo</a></em></p>
         </div>
+    </div>
+    <div class="col-xs-12 col-flush">
+        <div id="demo-section" class="section-header">
+            <span>demo installations</span>
+        </div>
+    </div>
+    <p>We also host a few demonstration Arches applications, so you can try it out for yourself. Once logged in, you can create new resources, and access the RDM (controlled vocabulary editor).</em></p>
+    <div class="col-xs-12">
+        <dl>
+            <dt><h5><a href="http://arches3.legiongis.com/afrh-demo">AFRH-IRIS demonstration site (www.arches3.legiongis.com/afrh-demo)</a></h5></dt>
+            <dd>We've set this site up to demonstrate the app we created with PRESERVE/scapes for the AFRH. To log in, use any of the following terms for both username and password: <span class="code">admin1</span>, <span class="code">admin2</span>, <span class="code">afrh_staff</span>, <span class="code">afrh_volunteer</span>, or <span class="code">development</span>. Each term corresponds to different permissions levels, so you will find that certain actions are hidden or exposed depending on which group you have used to login. To experience full access, use the <span class="code">admin1</span> account.</dd>
+            <dt><h5><a href="http://arches3.legiongis.com/afrh-demo">Arches-HIP basic installation (www.arches3.legiongis.com/hip)</a></h5></dt>
+            <dd>This demo exists as a quick reference for what a blank installation of the default Arches-HIP app looks like. Log in using <span class="code">guest</span> for both username and password to get full access to the system. For a much more interesting version of Arches-HIP, check out the Getty Conservation Institute's official <a href="http://archesproject.org/see-arches/">Arches v3 Demo</a>, which includes some very rich sample datasets.</dd>
+        </dl>
     </div>
     <div class="col-xs-12 col-flush">
         <div class="section-header">
             <span>hosting</span>
         </div>
-        <p>Even though Arches is open source software (free to use), it still needs to be hosted on a server somewhere, so it is accessible through the internet. Along with data migration, component customization, and final installation, we can take care of hosting for you as well. We use Amazon Web Services for all of our web hosting. This is a reliable and cost effective service that lends itself perfectly to the architecture of the Arches platform. Please get in touch with us to discuss prices for all of our Arches-related services.</p>
+        <p>Even though Arches is open source software (free to use), it still needs to be hosted on a server somewhere, so it is accessible through the internet. We use Amazon Web Services for all of our web hosting. This is a reliable and cost effective service that lends itself perfectly to the architecture of the Arches platform. Please get in touch with us to discuss prices for hosting your Arches installation.</p>
     </div>
     <div class="col-xs-12 col-flush">
         <div class="section-header">
@@ -190,7 +204,7 @@ If you're a curious programmer, you'll be happy to learn that we do all of our A
         <div class="container-fluid">
             <div class="row" style="padding:5px 0px;">
                 <div class="col-sm-4">
-                    <p>site updated Oct 31, 2016 (<a href="https://github.com/mradamcox/legiongis-pelicansite/commits/master">view commits</a>)</p>
+                    <p>site updated Nov 07, 2016 (<a href="https://github.com/mradamcox/legiongis-pelicansite/commits/master">view commits</a>)</p>
                 </div>
                 <div class="col-sm-4">
                     <p><a id="email-address"></a> | 608-606-9928</p>

@@ -346,3 +346,11 @@ pre, ol, ul {
 .quick-link-list li {
     /*list-style-type: none;*/
 }
+
+.code {
+    font-family: monospace;
+    background: #eaeaea;
+    padding-right: 4px;
+    padding-left: 4px;
+    border-radius: 2px;
+}
