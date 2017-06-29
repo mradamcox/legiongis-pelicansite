@@ -11,9 +11,9 @@ $(document).ready(function() {
 
         var modalId = i+"modal";
         var imgID = i+"image";
-        var pdfLink = "http://geo.legiongis.com/wcr-crawford/pdf/CR"+i+".pdf";
-        var thumbLink = "http://geo.legiongis.com/wcr-crawford/thumbs/CR"+i+"_thumb.png";
-        var jpgLink = "http://geo.legiongis.com/wcr-crawford/jpeg/CR"+i+".jpg";
+        var pdfLink = "http://legiongis.com/wcr-crawford/pdf/CR"+i+".pdf";
+        var thumbLink = "http://legiongis.com/wcr-crawford/thumbs/CR"+i+"_thumb.png";
+        var jpgLink = "http://legiongis.com/wcr-crawford/jpeg/CR"+i+".jpg";
         var containerId = "CR"+i;
         
         
@@ -39,8 +39,8 @@ $(document).ready(function() {
         // </a>
         $(divContent).insertBefore("#end");
         // if (isInArray(i, seconds)){
-            // var pdfLink_2 = "http://geo.legiongis.com/wcr-crawford/pdf/CR"+i+"_2.pdf";
-            // var thumbLink_2 = "http://geo.legiongis.com/wcr-crawford/thumbs/CR"+i+"_2_thumb.png";
+            // var pdfLink_2 = "http://legiongis.com/wcr-crawford/pdf/CR"+i+"_2.pdf";
+            // var thumbLink_2 = "http://legiongis.com/wcr-crawford/thumbs/CR"+i+"_2_thumb.png";
             // $('<div class="col-xs-6 col-sm-3">\
                 // <div class="tile">\
                     // <a href="'+pdfLink_2+'">\
@@ -83,5 +83,5 @@ $(document).ready(function() {
     });
 });
 //zoomWindowHeight: 200, zoomWindowWidth:450,
-//http://geo.legiongis.com/WCRs/tif/CR1.tif
+//http://legiongis.com/WCRs/tif/CR1.tif
 
