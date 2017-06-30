@@ -319,7 +319,6 @@ pre, ol, ul {
 .header-nav-list li {
   display: inline-block;
   padding: 5px 15px;
-  height: 38px;
 }
 
 .header-nav-list li a {
