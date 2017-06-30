@@ -310,8 +310,6 @@ pre, ol, ul {
 .header-nav-list {
     text-align:center;
     margin-bottom:0 !important;
-    padding:0px;
-    height:38px;
     list-style-type: none;
     margin: 0px;
 }
