@@ -88,17 +88,37 @@
     <div class="section-header">
         <span>personnel</span>
     </div>
-    <div class="col-xs-2 headshot col-flush">
-        <img src="https://s3-us-west-2.amazonaws.com/legiongis.com/img/ac_headshot.jpg"></img>
+    <div class="row personnel-row">
+        <div class="col-xs-2 headshot col-flush">
+            <img src="theme/img/ac_headshot.jpg"></img>
+        </div>
+        <div class="col-xs-10">
+            <p><strong>Adam Cox</strong> holds a B.A. in Anthropology from Lawrence University, in Appleton, Wisconsin. He has worked with GIS since 2011, beginning in cultural resource management and historic presevation, but continues to find himself in a variety of geospatial applications--from environmental advocacy to web-based spatial databases. In his free time, he pores over old maps and goes exploring.</p>
+            <p><a id="adam-email"></a> | <a href="https://www.linkedin.com/in/mradamcox">LinkedIn</a>
+        </div>
     </div>
-    <div class="col-xs-10">
-        <p>Adam Cox holds a BA in Anthropology from Lawrence University, in Appleton, Wisconsin. He has worked with GIS since 2011, beginning in cultural resource management and historic preservation, but finding work in many different fields--from hazard mitigation planning to co-teaching software classes. In his free time, he pores over old maps and gazes adoringly at remnants of old roads.</p>
-        <p><a id="adam-email"></a> | <a href="https://www.linkedin.com/in/mradamcox">LinkedIn</a> | <a href="http://www.adamcfcox.com">personal site</a></p>
+    <div class="row personnel-row">
+        <div class="col-xs-2 headshot col-flush">
+            <img src="theme/img/bw_profile.jpg"></img>
+        </div>
+        <div class="col-xs-10">
+            <p><strong>Billy Williamson</strong> is finishing a B.S. in Information Technology at Southeastern Louisiana University in Hammond, Louisiana. Working with various technologies, he has been building web and mobile applications since 2013, most notably web and system administration tools for GIS applications. When not at his desk, Billy enjoys spending time with his family, playing music, and fishing.</p>
+            <p><a id="billy-email"></a> | <a href="https://www.linkedin.com/in/billy-williamson-bedubs/">LinkedIn</a>
+        </div>
+    </div>
+    <div class="row personnel-row">
+        <div class="col-xs-2 headshot col-flush">
+            <img src="theme/img/liz_headshot.jpg"></img>
+        </div>
+        <div class="col-xs-10">
+            <p><strong>Liz Franklin</strong> is our office manager, and keeps things running smoothly on the home front.</p>
+            <p><a id="liz-email"></a> | <a href="https://www.linkedin.com/in/liz-franklin-8272905b/">LinkedIn</a>
+        </div>
     </div>
 </div>
 <div class="col-xs-12 col-sm-4">
     <div id="clients" class="col-xs-12 client-list-box">
-        <h4 style="text-align:center;">our clients</h4>
+        <h4 style="text-align:center;">some of our clients...</h4>
         <div class="client-list">
             <a href="http://valleystewardshipnetwork.org/"><img src="theme/img/client-logos/gci.png"></img></a>
         </div>
@@ -136,12 +156,20 @@
 </div>
 <script>
     var a1 = "adam";
+    var b1 = "billy";
+    var l1 = "liz";
     var g2 = "@";
     var g3 = "legiongis.com";
     var adam = a1+g2+g3;
+    var billy = b1+g2+g3;
+    var liz = l1+g2+g3;
     $(document).ready(function() {
         document.getElementById('adam-email').textContent = adam;
         document.getElementById('adam-email').href = "mailto:"+adam;
+        document.getElementById('billy-email').textContent = billy;
+        document.getElementById('billy-email').href = "mailto:"+billy;
+        document.getElementById('liz-email').textContent = liz;
+        document.getElementById('liz-email').href = "mailto:"+liz;
     });
 </script>
                     </div>
@@ -173,7 +201,7 @@
             <div class="row">
                 <div class="footer-content col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
                     <div class="col-sm-4">
-                        <p>site updated Jun 30, 2017 (<a href="https://github.com/mradamcox/legiongis-pelicansite/commits/master">view commits</a>)</p>
+                        <p>site updated Aug 10, 2017 (<a href="https://github.com/mradamcox/legiongis-pelicansite/commits/master">view commits</a>)</p>
                     </div>
                     <div class="col-sm-4">
                         <p><a id="email-address"></a> | 608-606-9928</p>

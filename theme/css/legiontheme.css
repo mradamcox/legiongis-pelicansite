@@ -384,3 +384,7 @@ pre, ol, ul {
     padding-left: 4px;
     border-radius: 2px;
 }
+
+.personnel-row {
+    margin: 10px 0px 10px 0px;
+}
