@@ -50,12 +50,6 @@ img {
     display: block;
 }
 
-.dropdown-menu {
-    background-color: #B73709;
-    color: white;
-    left: -5px;
-}
-
 .recent-news-header {
     text-align: center;
 }
@@ -276,7 +270,7 @@ pre, ol, ul {
   height:115px;
   /*max-height: 55px;*/
   position:relative;
-  background:url('https://s3-us-west-2.amazonaws.com/legiongis.com/img/kvr_background_wide.png') no-repeat center center fixed;
+  background:url('../img/kvr_background_wide.jpg') no-repeat center center fixed;
   background-size:cover;
 
 }
@@ -287,7 +281,7 @@ pre, ol, ul {
   /*height:30%;*/
   height:115px;
   position:relative;
-  background:url('/theme/img/kvr_background_wide.jpg') no-repeat center center fixed;
+  background:url('../img/kvr_background_wide.jpg') no-repeat center center fixed;
   background-size:cover;
 
 }
@@ -302,16 +296,13 @@ pre, ol, ul {
 
 /* Navbar */
 
-.pages {
-    background-color: #334150;
-    color: white;
-}
-
 .header-nav-list {
     text-align:center;
     margin-bottom:0 !important;
     list-style-type: none;
     margin: 0px;
+    background-color: #334150;
+    color: white;
 }
 
 .header-nav-list li {
@@ -322,15 +313,39 @@ pre, ol, ul {
 .header-nav-list li a {
     color: white;
     font-weight: 400;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-family: 'Racing Sans One';
     font-size: 14pt;
     
 }
 
-.header-nav-list li.active {
+.nav-btn {
+    padding:0px;
+    border:none;
+    background-color: #334150;
+    vertical-align:baseline;
+}
+
+.nav-link-active {
   background-color: #637486;
   border:none;
+}
+
+.dropdown-menu {
+    background-color: #a58594;
+    color: white;
+    border-top-right-radius:0px;
+    border-top-left-radius:0px;
+}
+
+.dropdown-menu>li {
+    padding:0px;
+}
+
+.dropdown-menu>li>a:hover {
+    color: #262626;
+    text-decoration: none;
+    background-color: #b2baa2;
 }
 
 .hr-slight {
@@ -383,4 +398,8 @@ pre, ol, ul {
     padding-right: 4px;
     padding-left: 4px;
     border-radius: 2px;
+}
+
+.personnel-row {
+    margin: 10px 0px 10px 0px;
 }
