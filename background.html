@@ -43,7 +43,7 @@
     <!-- blue imp gallery currently locally hosted -->
     <link rel="stylesheet" href="./theme/plugins/Gallery-2.21.3/css/blueimp-gallery.min.css">
     
-    <title>background - Legion GIS</title>
+    <title>About Us - Legion GIS</title>
     <meta charset="utf-8" />
     <link href="http://legiongis.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Legion GIS, LLC Full Atom Feed" />
     <link href="http://legiongis.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Legion GIS, LLC Full RSS Feed" />
@@ -57,7 +57,7 @@
                     <div class="col-xs-12 col-flush">
                         <div class="pages">
                             <ul class="header-nav-list" style="">
-                                <li class=""><a href="./index.html"><img src="/theme/img/whitelogo.png" style="width:225px"></img></a></li>
+                                <li class=""><a href="./index.html"><img src="theme/img/whitelogo.png" style="width:225px"></img></a></li>
                                 <li class=""><a href="./services.html">services</a></li>
                                 <li class="active"><a href="./background.html">background</a></li>
                                 <li class=""><a href="./blog.html">blog</a></li>
@@ -84,21 +84,41 @@
     <div class="section-header">
         <span>technology</span>
     </div>
-    <p>We have a firm foundation in the ArcGIS software suite, but in recent years have become proficient with many open source and web-GIS software alternatives. Quantum GIS, GIMP, GDAL, GeoServer, OpenLayers 3, and Python are all firmly stowed in our toolbox. We also excel at research and data migration: finding, converting, and utilizing information from the depths of your institution or from your musty local government archives.</p>
+    <p>We have a firm foundation in the ArcGIS software suite, as well as many of the most commonly used open source and web-GIS software alternatives. Quantum GIS, GeoServer, PostGIS, Open Layers 3, Leaflet, and Python are all firmly stowed in our toolbox. We also excel at historical research and data migration: finding, converting, and utilizing information from the depths of your institution or from your local government archives.</p>
     <div class="section-header">
         <span>personnel</span>
     </div>
-    <div class="col-xs-2 headshot col-flush">
-        <img src="https://s3-us-west-2.amazonaws.com/legiongis.com/img/ac_headshot.jpg"></img>
+    <div class="row personnel-row">
+        <div class="col-xs-2 headshot col-flush">
+            <img src="theme/img/ac_headshot.jpg"></img>
+        </div>
+        <div class="col-xs-10">
+            <p><strong>Adam Cox</strong> holds a B.A. in Anthropology from Lawrence University, in Appleton, Wisconsin, and has worked in the GIS field since 2011. Beginning in cultural resource management and historic presevation, he continues to find himself in a growing variety of geospatial applications&mdash;from environmental advocacy to web-based spatial databases. In his free time, he pores over old maps and goes exploring.</p>
+            <p><a id="adam-email"></a> | <a href="https://www.linkedin.com/in/mradamcox">LinkedIn</a>
+        </div>
     </div>
-    <div class="col-xs-10">
-        <p>Adam Cox holds a BA in Anthropology from Lawrence University, in Appleton, Wisconsin. He has worked with GIS since 2011, beginning in cultural resource management and historic preservation, but finding work in many different fields--from hazard mitigation planning to co-teaching software classes. In his free time, he pores over old maps and gazes adoringly at remnants of old roads.</p>
-        <p><a id="adam-email"></a> | <a href="https://www.linkedin.com/in/mradamcox">LinkedIn</a> | <a href="http://www.adamcfcox.com">personal site</a></p>
+    <div class="row personnel-row">
+        <div class="col-xs-2 headshot col-flush">
+            <img src="theme/img/bw_profile.jpg"></img>
+        </div>
+        <div class="col-xs-10">
+            <p><strong>Billy Williamson</strong> is finishing a B.S. in Information Technology at Southeastern Louisiana University in Hammond, Louisiana. Working with various technologies, he has been building web and mobile applications since 2013, most notably web and system administration tools for GIS applications. When not at his desk, Billy enjoys spending time with his family, playing music, and fishing.</p>
+            <p><a id="billy-email"></a> | <a href="https://www.linkedin.com/in/billy-williamson-bedubs/">LinkedIn</a>
+        </div>
+    </div>
+    <div class="row personnel-row">
+        <div class="col-xs-2 headshot col-flush">
+            <img src="theme/img/liz_headshot.jpg"></img>
+        </div>
+        <div class="col-xs-10">
+            <p><strong>Liz Franklin</strong> is our office manager, and keeps things running smoothly on the home front.</p>
+            <p><a id="liz-email"></a> | <a href="https://www.linkedin.com/in/liz-franklin-8272905b/">LinkedIn</a>
+        </div>
     </div>
 </div>
 <div class="col-xs-12 col-sm-4">
     <div id="clients" class="col-xs-12 client-list-box">
-        <h4 style="text-align:center;">our clients</h4>
+        <h4 style="text-align:center;">some of our clients...</h4>
         <div class="client-list">
             <a href="http://valleystewardshipnetwork.org/"><img src="theme/img/client-logos/gci.png"></img></a>
         </div>
@@ -136,12 +156,20 @@
 </div>
 <script>
     var a1 = "adam";
+    var b1 = "billy";
+    var l1 = "liz";
     var g2 = "@";
     var g3 = "legiongis.com";
     var adam = a1+g2+g3;
+    var billy = b1+g2+g3;
+    var liz = l1+g2+g3;
     $(document).ready(function() {
         document.getElementById('adam-email').textContent = adam;
         document.getElementById('adam-email').href = "mailto:"+adam;
+        document.getElementById('billy-email').textContent = billy;
+        document.getElementById('billy-email').href = "mailto:"+billy;
+        document.getElementById('liz-email').textContent = liz;
+        document.getElementById('liz-email').href = "mailto:"+liz;
     });
 </script>
                     </div>
@@ -173,7 +201,7 @@
             <div class="row">
                 <div class="footer-content col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
                     <div class="col-sm-4">
-                        <p>site updated Jun 30, 2017 (<a href="https://github.com/mradamcox/legiongis-pelicansite/commits/master">view commits</a>)</p>
+                        <p>site updated Aug 16, 2017 (<a href="https://github.com/mradamcox/legiongis-pelicansite/commits/master">view commits</a>)</p>
                     </div>
                     <div class="col-sm-4">
                         <p><a id="email-address"></a> | 608-606-9928</p>
