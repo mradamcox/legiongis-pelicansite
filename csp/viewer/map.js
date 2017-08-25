@@ -19,8 +19,16 @@ var map = L.map('map').setView([43.22219, -90.9201], 10);
             attribution: '&copy; '+mapLink+', '+wholink,
             maxZoom: 18,
             });
+            
+    var counties = L.tileLayer.wms('https://db.legiongis.com/geoserver/ows?', {
+        layers: 'wi_ref:wi_counties_nrcs_4269',
+        format: 'image/png',
+        transparent: true,
+        attribution: ""
+    })
     
     map.addLayer(outdoors);
+    map.addLayer(counties);
     
     var hillshade = L.tileLayer.wms('https://db.legiongis.com/geoserver/ows?', {
         layers: 'elevation:driftless_hillshade',
@@ -61,8 +69,9 @@ var map = L.map('map').setView([43.22219, -90.9201], 10);
     
 
     var overlaysDict = {
+        "WI Counties":counties,
         "Hillshade":hillshade,
-        "Bedrock":bedrock,
+        "Crawford Co Bedrock":bedrock,
         "Watersheds":watersheds,
         "Fracture Lines":frac,
         "Sinkholes (sized by depth)":sinks
