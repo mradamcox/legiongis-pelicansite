@@ -8,31 +8,15 @@ var osm_attr = new ol.Attribution({
     html: '&copy; <a href="http://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors.'
 });
 
-var slope = {
-    id: "slope",
-    info: "LiDAR slope derivative, 5ft",
-    layer: new ol.layer.Tile({
-        name: 'slope',
-        source: new ol.source.TileWMS({
-            url: 'http://www.legiongis.com/geoserver/wms/',
-            params: {
-                'LAYERS':'crawford_co:Crawford_Slope-3857',
-                'TILED':false,
-            },
-            serverType: 'geoserver'
-        }),
-    })
-};
-
 var hillshade = {
     id: "hillshade",
     info: "LiDAR hillshade derivative, 5ft",
     layer: new ol.layer.Tile({
         name: 'hillshade',
         source: new ol.source.TileWMS({
-            url: 'http://www.legiongis.com/geoserver/wms/',
+            url: 'https://db.legiongis.com/geoserver/wms/',
             params: {
-                'LAYERS':'crawford_co:Crawford_Hillshade-3857',
+                'LAYERS':'elevation:driftless_hillshade',
                 'TILED':true,
             },
             serverType: 'geoserver'
@@ -67,6 +51,22 @@ var muni = {
             url: 'http://www.legiongis.com/geoserver/wms/',
             params: {
                 'LAYERS':'crawford_co:crawford_muni',
+                'TILED':true,
+            },
+            serverType: 'geoserver'
+        }),
+    })
+};
+
+var watersheds = {
+    id: "watersheds",
+    info: "Hydrologic Units - Categories 8, 10, 12",
+    layer: new ol.layer.Tile({
+        name: 'watersheds',
+        source: new ol.source.TileWMS({
+            url: 'https://db.legiongis.com/geoserver/wms/',
+            params: {
+                'LAYERS':'wi_ref:wi_watersheds',
                 'TILED':true,
             },
             serverType: 'geoserver'
@@ -136,12 +136,12 @@ var blank = {
     })
 };
 
-var basemaps = [slope,hillshade,aerial,blank];
+var basemaps = [hillshade,aerial,blank];
 var sink_layers = [sinks1_2,sinks2_5,sinks5,blank];
-$('#slope').addClass('selected');
+$('#hillshade').addClass('selected');
 $('#s5').addClass('selected');
 
-var collection = new ol.Collection([slope.layer,muni.layer,sinks5.layer]);
+var collection = new ol.Collection([hillshade.layer,watersheds.layer,sinks5.layer]);
 
 var info_shown = false
 
