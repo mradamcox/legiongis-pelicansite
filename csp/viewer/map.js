@@ -69,12 +69,12 @@ var map = L.map('map').setView([43.22219, -90.9201], 10);
     
 
     var overlaysDict = {
-        "WI Counties":counties,
         "Hillshade":hillshade,
         "Crawford Co Bedrock":bedrock,
         "Watersheds":watersheds,
         "Fracture Lines":frac,
-        "Sinkholes (sized by depth)":sinks
+        "Sinkholes (sized by depth)":sinks,
+        "WI Counties":counties,
     };
 
     L.control.layers(baseLayers, overlaysDict).addTo(map);
