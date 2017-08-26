@@ -7,6 +7,15 @@ html body {
     width: 100%;
 }
 
+.topbar {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(119, 119, 119, 0.75);
+    z-index: 1000;
+    text-align:center;
+    color:white;
+}
+
 .navbar {
     background-color: rgba(255, 255, 255, 0.9);
     position: fixed;
