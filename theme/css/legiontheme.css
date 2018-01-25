@@ -388,3 +388,8 @@ pre, ol, ul {
 .personnel-row {
     margin: 10px 0px 10px 0px;
 }
+
+.center-sections {
+    border-right: 1px solid #282828;
+    border-left: 1px solid #282828;
+}
